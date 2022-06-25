@@ -30,7 +30,7 @@ abstract class SniffTestCase extends TestCase
     protected function loadFile(): LocalFile
     {
         $names = explode('\\', static::class);
-        $filename = str_replace('test', '', strtolower(array_pop($names)));
+        $filename = str_replace('Test', '', array_pop($names));
         $paths = [__DIR__,  ...array_slice($names, 2), '_data', $filename . '.php.inc'];
         $testFile = implode(DIRECTORY_SEPARATOR, $paths);
 
