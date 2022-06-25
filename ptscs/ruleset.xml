@@ -19,6 +19,7 @@
     ++++++++++++++++++++++++++++++++++++-->
     <rule ref="Generic.PHP.RequireStrictTypes" />
     <rule ref="Squiz.PHP.CommentedOutCode" />
+    <rule ref="PEAR.Files.IncludingFile.BracketsNotRequired" />
 
     <!-- Allow snake_case in test methods -->
     <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">

@@ -56,6 +56,15 @@ public function test_something(): void
   - `debug_print_backtrace`
   - `eval`
   - `extract`
+6. Do not use bracket when include a file
+```php
+// will warn you about this
+require_once($file);
+
+// brackets are not required
+require_once $file;
+```
+
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
