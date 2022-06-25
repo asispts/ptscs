@@ -12,6 +12,6 @@ final class StrictTypesTest extends SniffTestCase
 
     public function provideTestData(): Iterator
     {
-        yield [1,0, [new ErrorData(1, 1, self::RULE, 'Missing required strict_types declaration')]];
+        yield [[new ErrorData(1, 1, self::RULE, 'Missing required strict_types declaration')]];
     }
 }

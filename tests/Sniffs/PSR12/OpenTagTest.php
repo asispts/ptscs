@@ -9,6 +9,6 @@ final class OpenTagTest extends SniffTestCase
 {
     public function provideTestData(): Iterator
     {
-        yield [0,0,[]];
+        yield [];
     }
 }

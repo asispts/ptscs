@@ -49,17 +49,23 @@ abstract class SniffTestCase extends TestCase
     /**
      * @dataProvider provideTestData
      *
-     * @param ErrorData[] $errData
+     * @param ErrorData[] $errorData
+     * @param ErrorData[] $warningData
      */
-    public function test_sniffs(int $errorCount, int $warningCount, array $errData): void
+    public function test_sniffs(array $errorData = [], array $warningData = []): void
     {
         $phpcs = $this->loadFile();
 
-        $this->assertSame($errorCount, $phpcs->getErrorCount());
-        $this->assertSame($warningCount, $phpcs->getWarningCount());
+        $this->assertSame(count($errorData), $phpcs->getErrorCount());
+        $this->assertSame(count($warningData), $phpcs->getWarningCount());
 
         $errors = $phpcs->getErrors();
-        foreach ($errData as $item) {
+        foreach ($errorData as $item) {
+            $this->assertArrayHasKey($item->line, $errors);
+            $this->assertSniff($item, $errors[$item->line]);
+        }
+
+        foreach ($warningData as $item) {
             $this->assertArrayHasKey($item->line, $errors);
             $this->assertSniff($item, $errors[$item->line]);
         }
