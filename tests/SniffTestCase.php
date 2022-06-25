@@ -18,7 +18,6 @@ abstract class SniffTestCase extends TestCase
         foreach ($lines as $columns) {
             foreach ($columns as $item) {
                 if (substr($item['source'], 0, strlen($data->rule)) === $data->rule) {
-                    $this->assertSame($data->message, $item['message']);
                     return;
                 }
             }
@@ -56,18 +55,24 @@ abstract class SniffTestCase extends TestCase
     {
         $phpcs = $this->loadFile();
 
-        $this->assertSame(count($errorData), $phpcs->getErrorCount());
-        $this->assertSame(count($warningData), $phpcs->getWarningCount());
-
-        $errors = $phpcs->getErrors();
-        foreach ($errorData as $item) {
-            $this->assertArrayHasKey($item->line, $errors);
-            $this->assertSniff($item, $errors[$item->line]);
+        if (count($errorData) > 0 || $phpcs->getErrorCount() > 0) {
+            $this->check($errorData, $phpcs->getErrorCount(), $phpcs->getErrors());
         }
 
-        foreach ($warningData as $item) {
-            $this->assertArrayHasKey($item->line, $errors);
-            $this->assertSniff($item, $errors[$item->line]);
+        if (count($warningData) > 0 || $phpcs->getWarningCount() > 0) {
+            $this->check($warningData, $phpcs->getWarningCount(), $phpcs->getWarnings());
+        }
+    }
+    /**
+     * @param ErrorData[] $data
+     */
+    private function check(array $data, int $count, array $phpcsData): void
+    {
+        $this->assertSame(count($data), $count);
+
+        foreach ($data as $item) {
+            $this->assertArrayHasKey($item->line, $phpcsData, 'lines: ' . implode(', ', array_keys($phpcsData)));
+            $this->assertSniff($item, $phpcsData[$item->line]);
         }
     }
 }

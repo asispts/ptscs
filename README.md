@@ -44,7 +44,7 @@ public function test_something(): void
 
 }
 ```
-
+4. Detect commented-out code.
 
 
 ## License
