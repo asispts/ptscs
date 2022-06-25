@@ -1,0 +1,37 @@
+{
+  "name": "asispts/ptscs",
+  "description": "PSR-12 based PHP coding standard",
+  "type": "phpcodesniffer-standard",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Asis Pattisahusiwa",
+      "email": "asis.pattisahusiwa@gmail.com"
+    }
+  ],
+  "keywords": [
+    "standard",
+    "standards",
+    "phpcs",
+    "coding",
+    "style"
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ptscs\\Tests\\": "tests"
+    }
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "0.*"
+  }
+}
