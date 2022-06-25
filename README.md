@@ -37,7 +37,13 @@ Allow php tag and strict types in the same line.
 ```
 
 2. Require `declare(strict_types=1)` in all PHP files
+3. Allow `snake_case` in test methods
+```php
+public function test_something(): void
+{
 
+}
+```
 
 
 

@@ -18,4 +18,9 @@
     Additional rules
     ++++++++++++++++++++++++++++++++++++-->
     <rule ref="Generic.PHP.RequireStrictTypes" />
+
+    <!-- Allow snake_case in test methods -->
+    <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+        <exclude-pattern>tests</exclude-pattern>
+    </rule>
 </ruleset>
