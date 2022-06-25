@@ -55,21 +55,25 @@ abstract class SniffTestCase extends TestCase
     {
         $phpcs = $this->loadFile();
 
-        if (count($errorData) > 0 || $phpcs->getErrorCount() > 0) {
-            $this->check($errorData, $phpcs->getErrorCount(), $phpcs->getErrors());
+        $errorCount = count($errorData);
+        $warningCount = count($warningData);
+
+        $this->assertSame($errorCount, $phpcs->getErrorCount());
+        $this->assertSame($warningCount, $phpcs->getWarningCount());
+
+        if ($errorCount > 0) {
+            $this->check($errorData, $phpcs->getErrors());
         }
 
-        if (count($warningData) > 0 || $phpcs->getWarningCount() > 0) {
-            $this->check($warningData, $phpcs->getWarningCount(), $phpcs->getWarnings());
+        if ($warningCount > 0) {
+            $this->check($warningData, $phpcs->getWarnings());
         }
     }
     /**
      * @param ErrorData[] $data
      */
-    private function check(array $data, int $count, array $phpcsData): void
+    private function check(array $data, array $phpcsData): void
     {
-        $this->assertSame(count($data), $count);
-
         foreach ($data as $item) {
             $this->assertArrayHasKey($item->line, $phpcsData, 'lines: ' . implode(', ', array_keys($phpcsData)));
             $this->assertSniff($item, $phpcsData[$item->line]);
