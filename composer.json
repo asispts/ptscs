@@ -33,5 +33,8 @@
   "require": {
     "php": ">=5.4.0",
     "dealerdirect/phpcodesniffer-composer-installer": "0.*"
+  },
+  "require-dev": {
+    "asispts/phpunit-stubs": "^9.5"
   }
 }

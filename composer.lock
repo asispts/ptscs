@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70f817710335e72042acbe8b98b09369",
+    "content-hash": "f5e9788f248259b4565ae3f8f0e3cfd8",
     "packages": [
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -138,7 +138,40 @@
             "time": "2022-06-18T07:21:10+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "asispts/phpunit-stubs",
+            "version": "v9.5.21",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asispts/phpunit-stubs.git",
+                "reference": "9caedb256a40ccdbd1e98738db00d7e11e8e5293"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asispts/phpunit-stubs/zipball/9caedb256a40ccdbd1e98738db00d7e11e8e5293",
+                "reference": "9caedb256a40ccdbd1e98738db00d7e11e8e5293",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Asis Pattisahusiwa",
+                    "email": "asispts@gmail.com"
+                }
+            ],
+            "description": "PHPUnit stubs for IDE intellisense",
+            "support": {
+                "issues": "https://github.com/asispts/phpunit-stubs/issues",
+                "source": "https://github.com/asispts/phpunit-stubs/tree/v9.5.21"
+            },
+            "time": "2022-06-25T13:37:20+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="ptscs">
+    <description>PSR-12 based PHP coding standard</description>
+
+    <arg name="tab-width" value="4" />
+    <!-- Don't hide tokenizer exceptions -->
+    <rule ref="Internal.Tokenizer.Exception">
+        <type>error</type>
+    </rule>
+
+    <rule ref="PSR12">
+        <!-- Allow <?php declare(strict_types=1); in the same line -->
+        <exclude name="PSR12.Files.OpenTag.NotAlone" />
+        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock" />
+    </rule>
+
+    <!--++++++++++++++++++++++++++++++++++++
+    Additional rules
+    ++++++++++++++++++++++++++++++++++++-->
+    <rule ref="Generic.PHP.RequireStrictTypes" />
+</ruleset>

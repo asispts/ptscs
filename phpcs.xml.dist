@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset>
+    <arg name="colors" />
+    <arg name="parallel" value="8" />
+    <arg value="psv" />
+    <arg name="extensions" value="php" />
+
+    <file>ptscs</file>
+    <file>tests</file>
+
+    <exclude-pattern>vendor</exclude-pattern>
+
+    <rule ref="ptscs/ruleset.xml" />
+</ruleset>

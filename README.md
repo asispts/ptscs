@@ -28,6 +28,19 @@ Create `phpcs.xml.dist`
 Run `phpcs` to validate your source code or `phpcbf` to fix the violations.
 
 
+## Coding standards
+
+1. Excluded from PSR-12 \
+Allow php tag and strict types in the same line.
+```php
+<?php declare(strict_types=1);
+```
+
+2. Require `declare(strict_types=1)` in all PHP files
+
+
+
+
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
 See [LICENSE](https://github.com/asispts/ptscs/blob/master/LICENSE) file.
