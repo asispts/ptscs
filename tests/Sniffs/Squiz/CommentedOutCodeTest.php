@@ -8,11 +8,8 @@ use Ptscs\Tests\Utils\ErrorData;
 
 final class CommentedOutCodeTest extends SniffTestCase
 {
-    private const RULE = 'Squiz.PHP.CommentedOutCode';
-
     public function provideTestData(): Iterator
     {
-        $err = new ErrorData(3, 0, self::RULE, 'is this commented out code?');
-        yield[[], [$err]];
+        yield[[], [new ErrorData(3, 'Squiz.PHP.CommentedOutCode')]];
     }
 }

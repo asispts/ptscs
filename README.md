@@ -45,7 +45,18 @@ public function test_something(): void
 }
 ```
 4. Detect commented-out code.
-
+5. Ban some built-in functions:
+  - `sizeof`, use `count`
+  - `delete` use `unset`
+  - `print`, use `echo`
+  - `each`, use `foreach`
+  - `is_null`, use `=== null`
+  - `create_function`
+  - `var_dump`
+  - `print_r`
+  - `debug_print_backtrace`
+  - `eval`
+  - `extract`
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).

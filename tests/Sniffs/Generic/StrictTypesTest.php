@@ -8,10 +8,8 @@ use Ptscs\Tests\Utils\ErrorData;
 
 final class StrictTypesTest extends SniffTestCase
 {
-    private const RULE = 'Generic.PHP.RequireStrictTypes';
-
     public function provideTestData(): Iterator
     {
-        yield [[new ErrorData(1, 1, self::RULE, 'Missing required strict_types declaration')]];
+        yield [[new ErrorData(1, 'Generic.PHP.RequireStrictTypes')]];
     }
 }

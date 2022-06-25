@@ -24,4 +24,23 @@
     <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
         <exclude-pattern>tests</exclude-pattern>
     </rule>
+
+    <!-- Ban some functions -->
+    <rule ref="Generic.PHP.ForbiddenFunctions">
+        <properties>
+            <property name="error" value="true" />
+            <property name="forbiddenFunctions" type="array">
+                <element key="sizeof" value="count" />
+                <element key="print" value="echo" />
+                <element key="each" value="foreach" />
+                <element key="is_null" value="null" />
+                <element key="create_function" value="null" />
+                <element key="var_dump" value="null" />
+                <element key="print_r" value="null" />
+                <element key="debug_print_backtrace" value="null" />
+                <element key="eval" value="null" />
+                <element key="extract" value="null" />
+            </property>
+        </properties>
+    </rule>
 </ruleset>
