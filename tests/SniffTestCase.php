@@ -58,8 +58,8 @@ abstract class SniffTestCase extends TestCase
         $errorCount = count($errorData);
         $warningCount = count($warningData);
 
-        $this->assertSame($errorCount, $phpcs->getErrorCount());
-        $this->assertSame($warningCount, $phpcs->getWarningCount());
+        $this->assertSame($errorCount, $phpcs->getErrorCount(), 'errorCount');
+        $this->assertSame($warningCount, $phpcs->getWarningCount(), 'warningCount');
 
         if ($errorCount > 0) {
             $this->check($errorData, $phpcs->getErrors());

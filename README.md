@@ -47,7 +47,6 @@ public function test_something(): void
 4. Detect commented-out code.
 5. Ban some built-in functions:
   - `sizeof`, use `count`
-  - `delete` use `unset`
   - `print`, use `echo`
   - `each`, use `foreach`
   - `is_null`, use `=== null`
