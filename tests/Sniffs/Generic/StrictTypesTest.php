@@ -8,6 +8,12 @@ use Ptscs\Tests\Utils\ErrorData;
 
 final class StrictTypesTest extends SniffTestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->excludes = [];
+    }
+
     public function provideTestData(): Iterator
     {
         yield [[new ErrorData(1, 'Generic.PHP.RequireStrictTypes')]];

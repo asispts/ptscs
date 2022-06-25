@@ -12,9 +12,23 @@ final class ForbiddenFunctionsTest extends SniffTestCase
 
     public function provideTestData(): Iterator
     {
+        $text = [
+            'sizeof',
+            'print',
+            'each',
+            'is_null',
+            'create_function',
+            'var_dump',
+            'print_r',
+            'debug_print_backtrace',
+            'eval',
+            'extract',
+        ];
+
+        $line = 3;
         $errors = null;
-        for ($i = 3; $i <= 12; $i++) {
-            $errors[] = new ErrorData($i, self::RULE);
+        foreach ($text as $txt) {
+            $errors[] = new ErrorData($line++, self::RULE, $txt . '() is forbidden');
         }
 
         yield[$errors];
