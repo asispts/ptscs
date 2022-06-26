@@ -35,3 +35,12 @@ function check(): void
       'key-medium'         => 'value',
     ];
 }
+
+// Squiz.Arrays.ArrayDeclaration.SpaceBeforeDoubleArrow
+$myArray = ['key' => 'value'];
+
+// Squiz.Arrays.ArrayDeclaration.SpaceAfterDoubleArrow
+$myArray = ['key' => 'value'];
+
+// @todo need to format this
+$myArray = [        'key' => 'value'      ,           'key2' => 'value'         ];

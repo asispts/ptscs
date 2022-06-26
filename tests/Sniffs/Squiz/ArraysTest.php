@@ -46,6 +46,8 @@ final class ArraysTest extends SniffTestCase
             new ErrorData(34, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
             new ErrorData(35, 'Squiz.WhiteSpace.OperatorSpacing.SpacingAfter'),
             new ErrorData(36, 'Generic.Arrays.ArrayIndent.CloseBraceIncorrect'),
+            new ErrorData(40, 'Squiz.Arrays.ArrayDeclaration.SpaceBeforeDoubleArrow'),
+            new ErrorData(43, 'Squiz.Arrays.ArrayDeclaration.SpaceAfterDoubleArrow'),
           ],
         ];
     }
