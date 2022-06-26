@@ -1,0 +1,180 @@
+<?php
+
+// Squiz.WhiteSpace.FunctionSpacing.After
+class Class1
+{
+
+
+    public function __construct()
+    {
+    }
+
+
+}
+class Class2
+{
+
+    /** @docs */
+
+    public function __construct()
+    {
+    }
+}
+class Class3
+{
+
+    #[attribute]
+
+    public function __construct()
+    {
+    }
+}
+class Class4
+{
+
+    /** @doc */
+
+    #[attribute]
+
+    public function __construct()
+    {
+    }
+}
+class Class5
+{
+
+    #[attribute]
+
+    /** @doc */
+
+    public function __construct()
+    {
+    }
+}
+class Spacing1
+{
+    public function __construct()
+    {
+    }
+    public function __get()
+    {
+    }
+
+
+
+    public function __invoke()
+    {
+    }
+}
+class Spacing2
+{
+    /** @doc */
+    public function __construct()
+    {
+    }
+    /** @doc */
+    public function __get()
+    {
+    }
+
+
+    /** @doc */
+
+
+    public function __clone()
+    {
+    }
+
+
+    /** @doc */
+    public function __invoke()
+    {
+    }
+}
+class Spacing3
+{
+    #[attribute]
+    public function __construct()
+    {
+    }
+    #[attribute]
+    public function __get()
+    {
+    }
+
+
+    #[attribute]
+
+
+    public function __clone()
+    {
+    }
+
+
+    #[attribute]
+    public function __invoke()
+    {
+    }
+}
+class Spacing4
+{
+    /** @doc */
+    #[attribute]
+    public function __construct()
+    {
+    }
+    /** @doc */
+    #[attribute]
+    public function __get()
+    {
+    }
+
+
+    /** @doc */
+
+
+    #[attribute]
+
+
+    public function __clone()
+    {
+    }
+
+
+    /** @doc */
+    #[attribute]
+    public function __invoke()
+    {
+    }
+}
+class Spacing5
+{
+    #[attribute]
+    /** @doc */
+    public function __construct()
+    {
+    }
+    #[attribute]
+    /** @doc */
+    public function __get()
+    {
+    }
+
+
+    #[attribute]
+
+
+    /** @doc */
+
+
+    public function __clone()
+    {
+    }
+
+
+    #[attribute]
+    /** @doc */
+    public function __invoke()
+    {
+    }
+}
