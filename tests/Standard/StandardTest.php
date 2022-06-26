@@ -28,7 +28,6 @@ final class StandardTest extends TestCase
     {
         $dir = __DIR__ . '/_data';
 
-        yield 'cast' => [$dir . '/cast.php.fixed'];
         yield 'class' => [$dir . '/class.php.fixed'];
         yield 'concatenation' => [$dir . '/concatenation.php.fixed'];
         yield 'ControlStructure' => [$dir . '/ControlStructure.php.fixed'];
@@ -52,6 +51,7 @@ final class StandardTest extends TestCase
         $dir = __DIR__ . '/_data';
 
         yield 'array' => [$dir . '/array.php.fixed'];
+        yield 'cast' => [$dir . '/cast.php.fixed'];
         yield 'language' => [$dir . '/language.php.fixed'];
         yield 'object' => [$dir . '/object.php.fixed'];
         yield 'OperatorSpacing' => [$dir . '/OperatorSpacing.php.fixed'];

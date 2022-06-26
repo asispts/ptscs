@@ -157,6 +157,16 @@ $this->testThis();
 parent::testThis();
 parent::testThis();
 ```
+15. Cast spacing
+```php
+(int)$var;
+(int)       $var;
+
+// will be formatted to
+(int) $var;
+(int) $var;
+```
+
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).

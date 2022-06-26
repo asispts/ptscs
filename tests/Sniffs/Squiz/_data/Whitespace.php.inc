@@ -17,3 +17,7 @@ $this   ->testThis();
 $this->     testThis();
 parent      ::testThis();
 parent::    testThis();
+
+// Generic.Formatting.SpaceAfterCast
+(int)$var;
+(int)       $var;
