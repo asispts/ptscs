@@ -196,6 +196,23 @@ echo "Double quote is not required here";
 echo 'Double quote is not required here';
 ```
 
+19. Remove space before and after function body
+```php
+function fn()
+{
+
+  $var = 1;
+
+}
+
+// will be formatted to
+function fn()
+{
+  $var = 1;
+}
+
+```
+
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
 See [LICENSE](https://github.com/asispts/ptscs/blob/master/LICENSE) file.

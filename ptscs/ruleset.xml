@@ -103,4 +103,10 @@
     <rule ref="Squiz.Strings.EchoedStrings" />
     <rule ref="Squiz.Strings.DoubleQuoteUsage" />
 
+
+    <!--++++++++++++++++++++++++++++++++++++
+    Function rules
+    ++++++++++++++++++++++++++++++++++++-->
+    <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace" />
+
 </ruleset>
