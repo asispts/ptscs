@@ -78,7 +78,10 @@
             <property name="indent" value="4" />
             <property name="exact" value="true" />
             <property name="tabIndent" value="false" />
-            <property name="ignoreIndentationTokens" type="array" value="" />
+            <!-- T_IMPLEMENTS -->
+            <property name="ignoreIndentationTokens" type="array">
+                <element value="T_CLASS" />
+            </property>
         </properties>
     </rule>
 
