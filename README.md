@@ -56,13 +56,18 @@ public function test_something(): void
   - `debug_print_backtrace`
   - `eval`
   - `extract`
-6. Do not use bracket when include a file
+6. Brackets are not required when including a file.
 ```php
 // will warn you about this
 require_once($file);
 
 // brackets are not required
 require_once $file;
+```
+7. Align multiple statements
+```php
+$var         = 'value';
+$longVarName = 'value';
 ```
 
 

@@ -25,7 +25,7 @@ final class ForbiddenFunctionsTest extends SniffTestCase
             'extract',
         ];
 
-        $line = 3;
+        $line   = 3;
         $errors = null;
         foreach ($text as $txt) {
             $errors[] = new ErrorData($line++, self::RULE, $txt . '() is forbidden');

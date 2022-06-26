@@ -8,14 +8,15 @@ use Ptscs\Tests\Utils\SniffAssertion;
 
 final class StandardTest extends TestCase
 {
+    private $excludes = ['PSR1.Classes.ClassDeclaration.MissingNamespace',
+    'PSR1.Files.SideEffects.FoundWithSymbols', 'Generic.PHP.RequireStrictTypes'];
+
     /**
      * @dataProvider provideFileOnly
      */
     public function test_should_not_produce_errors(string $filepath): void
     {
-        $excludes = ['PSR1.Classes.ClassDeclaration.MissingNamespace',
-        'PSR1.Files.SideEffects.FoundWithSymbols', 'Generic.PHP.RequireStrictTypes'];
-        $sniff = new SniffAssertion($filepath, 'ptscs', $excludes);
+        $sniff = new SniffAssertion($filepath, 'ptscs', $this->excludes);
         $sniff->assertError($this, []);
         $sniff->assertWarning($this, []);
     }
@@ -24,7 +25,6 @@ final class StandardTest extends TestCase
     {
         $dir = __DIR__ . '/_data';
 
-        yield 'array' => [$dir . '/array.php.fixed'];
         yield 'cast' => [$dir . '/cast.php.fixed'];
         yield 'class' => [$dir . '/class.php.fixed'];
         yield 'concatenation' => [$dir . '/concatenation.php.fixed'];
@@ -33,7 +33,23 @@ final class StandardTest extends TestCase
         yield 'FunctionCallSignature' => [$dir . '/FunctionCallSignature.php.fixed'];
         yield 'language' => [$dir . '/language.php.fixed'];
         yield 'object' => [$dir . '/object.php.fixed'];
-        yield 'OperatorSpacing' => [$dir . '/OperatorSpacing.php.fixed'];
-        yield 'ScopeIndent' => [$dir . '/ScopeIndent.php.fixed'];
+    }
+
+    /**
+     * @dataProvider psr12FixedFiles
+     */
+    public function test_fix_psr12(string $filepath): void
+    {
+        $fixedfile = str_replace('_data', '_fixed', $filepath);
+
+        $sniff = new SniffAssertion($filepath, 'ptscs', $this->excludes);
+        $sniff->assertFixed($this, $fixedfile);
+    }
+
+    public function psr12FixedFiles(): Iterator
+    {
+        $dir = __DIR__ . '/_data';
+
+        yield 'array' => [$dir . '/array.php.fixed'];
     }
 }

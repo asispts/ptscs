@@ -13,11 +13,11 @@ final class SniffAssertion
 
     public function __construct(string $incfile, string $standard, array $excludes)
     {
-        $config = new Config();
+        $config            = new Config();
         $config->standards = [$standard];
-        $config->exclude = $excludes;
+        $config->exclude   = $excludes;
 
-        $ruleset = new Ruleset($config);
+        $ruleset     = new Ruleset($config);
         $this->phpcs = new LocalFile($incfile, $ruleset, $config);
         $this->phpcs->process();
     }
@@ -51,10 +51,6 @@ final class SniffAssertion
         $count = count($expected);
         $I->assertSame($count, count($actual), $info . ' count. Lines: ' . implode(', ', array_keys($actual)));
 
-        if ($count <= 0) {
-            return;
-        }
-
         foreach ($expected as $item) {
             $I->assertArrayHasKey($item->line, $actual, 'lines: ' . implode(', ', array_keys($actual)));
             $this->checkItem($I, $item, $actual[$item->line]);
@@ -63,7 +59,7 @@ final class SniffAssertion
 
     private function checkItem(Assert $I, ErrorData $error, array $lines): void
     {
-        $rules  = [];
+        $rules = [];
         foreach ($lines as $columns) {
             foreach ($columns as $item) {
                 $rules[] = $item['source'];
@@ -83,6 +79,10 @@ final class SniffAssertion
 
     private function checkSource(Assert $I, ErrorData $error, array $item): bool
     {
+        if (empty($error->rule) === true) {
+            return false;
+        }
+
         if (substr($item['source'], 0, strlen($error->rule)) !== $error->rule) {
             return false;
         }

@@ -10,7 +10,7 @@ use Ptscs\Tests\Utils\SniffAssertion;
 abstract class SniffTestCase extends TestCase
 {
     protected string $standard = 'ptscs';
-    protected array $excludes = ['Generic.PHP.RequireStrictTypes'];
+    protected array $excludes  = ['Generic.PHP.RequireStrictTypes'];
 
     abstract public function provideTestData(): Iterator;
 
@@ -22,9 +22,9 @@ abstract class SniffTestCase extends TestCase
      */
     public function test_sniffs(array $errorData = [], array $warningData = []): void
     {
-        $names = explode('\\', static::class);
+        $names    = explode('\\', static::class);
         $filename = str_replace('Test', '', array_pop($names));
-        $paths = [__DIR__,  ...array_slice($names, 2), '_data', $filename . '.php.inc'];
+        $paths    = [__DIR__,  ...array_slice($names, 2), '_data', $filename . '.php.inc'];
 
         $filepath = implode(DIRECTORY_SEPARATOR, $paths);
 

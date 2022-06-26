@@ -29,7 +29,7 @@ final class DefaultPsr12StandardTest extends TestCase
      */
     public function test_sniff(string $filename, array $errorData = [], array $warningData = []): void
     {
-        $incfile = __DIR__ . '/_data/' . $filename . '.php.inc';
+        $incfile   = __DIR__ . '/_data/' . $filename . '.php.inc';
         $fixedfile = __DIR__ . '/_data/' . $filename . '.php.fixed';
 
         $sniff = new SniffAssertion($incfile, 'PSR12', $this->excludes);
