@@ -114,6 +114,14 @@ function check(): void
     ];
 }
 ```
+11. Format semi-colon spacing
+```php
+$var = 'value'      ;
+
+// will be formatted to
+$var = 'value';
+```
+
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).

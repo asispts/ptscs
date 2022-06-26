@@ -1,6 +1,6 @@
 <?php
 
-$this   ->testThis()  ;
+$this   ->testThis();
 $this->     testThis();
 
 parent      ::testThis();

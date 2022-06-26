@@ -34,7 +34,6 @@ final class StandardTest extends TestCase
         yield 'ControlStructure' => [$dir . '/ControlStructure.php.fixed'];
         yield 'function' => [$dir . '/function.php.fixed'];
         yield 'FunctionCallSignature' => [$dir . '/FunctionCallSignature.php.fixed'];
-        yield 'language' => [$dir . '/language.php.fixed'];
         yield 'object' => [$dir . '/object.php.fixed'];
     }
 
@@ -54,5 +53,6 @@ final class StandardTest extends TestCase
         $dir = __DIR__ . '/_data';
 
         yield 'array' => [$dir . '/array.php.fixed'];
+        yield 'language' => [$dir . '/language.php.fixed'];
     }
 }

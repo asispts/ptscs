@@ -63,10 +63,6 @@
         <exclude name="Squiz.Arrays.ArrayDeclaration.KeyNotAligned" />
         <exclude name="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed" />
     </rule>
-    <!--++++++++++++++++++++++++++++++++++++
-    Whitespace
-    ++++++++++++++++++++++++++++++++++++-->
-    <rule ref="Squiz.WhiteSpace.OperatorSpacing" />
 
     <!--
     Fix wrong indentation, eq:
@@ -85,4 +81,10 @@
             <property name="ignoreIndentationTokens" type="array" value="" />
         </properties>
     </rule>
+
+    <!--++++++++++++++++++++++++++++++++++++
+    Whitespace
+    ++++++++++++++++++++++++++++++++++++-->
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing" />
+    <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
 </ruleset>
