@@ -34,20 +34,21 @@ final class ArraysTest extends SniffTestCase
 
             new ErrorData(16, 'Generic.Arrays.ArrayIndent.CloseBraceIncorrect'),
 
+            new ErrorData(20, 'Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned'),
             new ErrorData(21, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
             new ErrorData(22, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
             new ErrorData(23, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
-            new ErrorData(24, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
+            new ErrorData(24, 'Generic.Arrays.ArrayIndent.CloseBraceIncorrect'),
             new ErrorData(25, 'Generic.Arrays.ArrayIndent.CloseBraceIncorrect'),
-            new ErrorData(26, 'Generic.Arrays.ArrayIndent.CloseBraceIncorrect'),
 
-            new ErrorData(32, 'Squiz.WhiteSpace.OperatorSpacing.SpacingAfter'),
-            new ErrorData(33, 'Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned'),
-            new ErrorData(34, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
-            new ErrorData(35, 'Squiz.WhiteSpace.OperatorSpacing.SpacingAfter'),
-            new ErrorData(36, 'Generic.Arrays.ArrayIndent.CloseBraceIncorrect'),
-            new ErrorData(40, 'Squiz.Arrays.ArrayDeclaration.SpaceBeforeDoubleArrow'),
-            new ErrorData(43, 'Squiz.Arrays.ArrayDeclaration.SpaceAfterDoubleArrow'),
+            new ErrorData(30, 'Generic.WhiteSpace.ScopeIndent.IncorrectExact'),
+            new ErrorData(31, 'Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned'),
+            new ErrorData(32, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
+            new ErrorData(33, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
+            new ErrorData(34, 'Generic.Arrays.ArrayIndent.CloseBraceIncorrect'),
+
+            new ErrorData(38, 'Squiz.Arrays.ArrayDeclaration.SpaceBeforeDoubleArrow'),
+            new ErrorData(41, 'Squiz.Arrays.ArrayDeclaration.SpaceAfterDoubleArrow'),
           ],
         ];
     }

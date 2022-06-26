@@ -15,8 +15,7 @@ $myArray =          [
             'key-medium'      =>      'value'
             ];
 
-function dataProvider(): array
-{
+while (true) {
     return [
                                     'Strict types test'             => [
                                                             'no-directive.php.inc',
@@ -27,8 +26,7 @@ function dataProvider(): array
 }
 
 
-function check(): void
-{
+while (true) {
                 return $myArray ===          [
                     'key1'      =>          'value',
                                 'key-long-long-long'          =>  'value',

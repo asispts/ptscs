@@ -105,8 +105,16 @@
 
 
     <!--++++++++++++++++++++++++++++++++++++
-    Function rules
+    Function and method rules
     ++++++++++++++++++++++++++++++++++++-->
     <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace" />
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+        <properties>
+            <property name="spacing" value="1" />
+            <property name="spacingBeforeFirst" value="0" />
+            <property name="spacingAfterLast" value="0" />
+        </properties>
+    </rule>
+
 
 </ruleset>

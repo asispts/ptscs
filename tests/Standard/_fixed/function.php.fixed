@@ -1,0 +1,32 @@
+<?php
+
+function name1()
+{
+}
+
+function name1()
+{
+}
+
+function name1()
+{
+}
+
+function name1(string $var)
+{
+}
+
+function name1(string $var)
+{
+}
+
+function name1(string $var)
+{
+}
+
+function name1(
+    string $var1,
+    int $var2,
+    int $var3
+) {
+}

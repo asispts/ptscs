@@ -210,7 +210,16 @@ function fn()
 {
   $var = 1;
 }
+```
+20. Spacing between functions
+```php
+function fn1()
+{
+}
 
+function fn2()
+{
+}
 ```
 
 ## License
