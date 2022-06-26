@@ -180,6 +180,14 @@ $var = 'Hello' . ' World';
 $var = 'Hello' . ' World';
 ```
 
+17. Echoed strings should not be bracketed
+```php
+echo('Should not be bracketed');
+
+// will be formatted to
+echo 'Should not be bracketed';
+```
+
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
 See [LICENSE](https://github.com/asispts/ptscs/blob/master/LICENSE) file.

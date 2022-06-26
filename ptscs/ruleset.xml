@@ -100,5 +100,6 @@
             <property name="spacing" value="1" />
         </properties>
     </rule>
+    <rule ref="Squiz.Strings.EchoedStrings" />
 
 </ruleset>

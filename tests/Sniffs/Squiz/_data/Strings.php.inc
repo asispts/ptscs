@@ -13,3 +13,7 @@ $var = 'Hello'
 $var = 'Hello'
 .
 ' World';
+
+
+// Squiz.Strings.EchoedStrings
+echo('Should not be bracketed');

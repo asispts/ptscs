@@ -9,10 +9,10 @@ echo 'test';
 echo 'test';
 echo $test;
 echo $test;
-echo('test');
-echo ('test');
-echo($test);
-echo ($test);
+echo 'test';
+echo 'test';
+echo $test;
+echo $test;
 
 
 $a = new stdClass();
