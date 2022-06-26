@@ -167,6 +167,18 @@ parent::testThis();
 (int) $var;
 ```
 
+16. String concatenation spacing
+```php
+$var = 'Hello' .     ' World';
+$var = 'Hello'      . ' World';
+$var = 'Hello'      .
+' World';
+
+// will be formatted to
+$var = 'Hello' . ' World';
+$var = 'Hello' . ' World';
+$var = 'Hello' . ' World';
+```
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).

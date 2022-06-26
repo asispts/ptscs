@@ -91,4 +91,14 @@
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing" />
     <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing" />
     <rule ref="Generic.Formatting.SpaceAfterCast" />
+
+    <!--++++++++++++++++++++++++++++++++++++
+    String rules
+    ++++++++++++++++++++++++++++++++++++-->
+    <rule ref="Squiz.Strings.ConcatenationSpacing">
+        <properties>
+            <property name="spacing" value="1" />
+        </properties>
+    </rule>
+
 </ruleset>
