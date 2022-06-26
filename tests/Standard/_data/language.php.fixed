@@ -15,8 +15,8 @@ echo($test)    ;
 echo       ($test)  ;
 
 
-$a=new    stdClass   (  )   ;
+$a = new    stdClass()   ;
 
 
 // PEAR.File.IncludingFile.BracketsNotRequired
-require_once($blah)   ;
+require_once $blah   ;

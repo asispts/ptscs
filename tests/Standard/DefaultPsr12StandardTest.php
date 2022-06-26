@@ -11,6 +11,19 @@ final class DefaultPsr12StandardTest extends TestCase
 {
     private $excludes = ['PSR1.Classes.ClassDeclaration.MissingNamespace',
     'PSR1.Files.SideEffects.FoundWithSymbols'];
+
+    /**
+     * @dataProvider provideTestData
+     */
+    public function test_fixed_files_should_not_produce_erros(string $filename): void
+    {
+        $fixedfile = __DIR__ . '/_data/' . $filename . '.php.fixed';
+
+        $sniff = new SniffAssertion($fixedfile, 'PSR12', $this->excludes);
+        $sniff->assertError($this, []);
+        $sniff->assertWarning($this, []);
+    }
+
     /**
      * @dataProvider provideTestData
      */

@@ -10,7 +10,7 @@ class Dummy
 {
     public function fn1()
     {
-} // Generic.WhiteSpace.ScopeIndent.IncorrectExact
+}
 
         public function fn1()
 {

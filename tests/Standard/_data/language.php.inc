@@ -19,4 +19,4 @@ $a = new    stdClass()   ;
 
 
 // PEAR.File.IncludingFile.BracketsNotRequired
-require_once($blah)   ;
+require_once $blah   ;
