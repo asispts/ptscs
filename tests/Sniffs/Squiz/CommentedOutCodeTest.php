@@ -10,6 +10,9 @@ final class CommentedOutCodeTest extends SniffTestCase
 {
     public function provideTestData(): Iterator
     {
-        yield[[], [new ErrorData(3, 'Squiz.PHP.CommentedOutCode')]];
+        yield[
+          [],
+          [new ErrorData(3, 'Squiz.PHP.CommentedOutCode')],
+        ];
     }
 }

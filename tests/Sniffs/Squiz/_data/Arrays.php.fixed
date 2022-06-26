@@ -9,10 +9,10 @@ $array['key'] = 'value';
 
 
 // Generic.Arrays.ArrayIndent
-$myArray =    [
-  'key1'      =>          'value',
-  'key2'          =>  'value',
-  'key3'      =>      'value'
+$myArray = [
+  'key1'               => 'value',
+  'key-long-long-long' => 'value',
+  'key-medium'         => 'value',
 ];
 
 function dataProvider(): array
@@ -23,5 +23,15 @@ function dataProvider(): array
         1,
         0,
       ],
+    ];
+}
+
+
+function check(): void
+{
+    return $myArray === [
+      'key1'               => 'value',
+      'key-long-long-long' => 'value',
+      'key-medium'         => 'value',
     ];
 }

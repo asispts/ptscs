@@ -9,19 +9,29 @@ $array['key'       ] = 'value';
 
 
 // Generic.Arrays.ArrayIndent
-$myArray =    [
+$myArray =          [
             'key1'      =>          'value',
-            'key2'          =>  'value',
-            'key3'      =>      'value'
+            'key-long-long-long'          =>  'value',
+            'key-medium'      =>      'value'
             ];
 
 function dataProvider(): array
 {
     return [
-                                    'Strict types test' => [
+                                    'Strict types test'             => [
                                                             'no-directive.php.inc',
                                                             1,
                                                             0,
                                                         ],
                                 ];
+}
+
+
+function check(): void
+{
+                return $myArray ===          [
+                    'key1'      =>          'value',
+                                'key-long-long-long'          =>  'value',
+'key-medium'      =>      'value'
+                    ];
 }

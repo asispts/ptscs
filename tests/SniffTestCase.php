@@ -24,7 +24,12 @@ abstract class SniffTestCase extends TestCase
     {
         $names    = explode('\\', static::class);
         $filename = str_replace('Test', '', array_pop($names));
-        $paths    = [__DIR__,  ...array_slice($names, 2), '_data', $filename . '.php.inc'];
+        $paths    = [
+          __DIR__,
+          ...array_slice($names, 2),
+          '_data',
+          $filename . '.php.inc',
+        ];
 
         $filepath = implode(DIRECTORY_SEPARATOR, $paths);
 
