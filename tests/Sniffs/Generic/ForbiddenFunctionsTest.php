@@ -13,16 +13,16 @@ final class ForbiddenFunctionsTest extends SniffTestCase
     public function provideTestData(): Iterator
     {
         $text = [
-            'sizeof',
-            'print',
-            'each',
-            'is_null',
-            'create_function',
-            'var_dump',
-            'print_r',
-            'debug_print_backtrace',
-            'eval',
-            'extract',
+          'sizeof',
+          'print',
+          'each',
+          'is_null',
+          'create_function',
+          'var_dump',
+          'print_r',
+          'debug_print_backtrace',
+          'eval',
+          'extract',
         ];
 
         $line   = 3;

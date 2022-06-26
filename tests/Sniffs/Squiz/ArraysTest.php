@@ -8,12 +8,37 @@ use Ptscs\Tests\Utils\ErrorData;
 
 final class ArraysTest extends SniffTestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->excludes = [
+          'Generic.PHP.RequireStrictTypes',
+          'PSR1.Files.SideEffects.FoundWithSymbols',
+        ];
+    }
+
     public function provideTestData(): Iterator
     {
-        yield[[
-            new ErrorData(3, 'Squiz.Arrays.ArrayBracketSpacing.SpaceBeforeBracket'),
-            new ErrorData(5, 'Squiz.Arrays.ArrayBracketSpacing.SpaceAfterBracket'),
-            new ErrorData(7, 'Squiz.Arrays.ArrayBracketSpacing.SpaceBeforeBracket'),
-        ]];
+        yield[
+          [
+            new ErrorData(4, 'Squiz.Arrays.ArrayBracketSpacing.SpaceBeforeBracket'),
+            new ErrorData(6, 'Squiz.Arrays.ArrayBracketSpacing.SpaceAfterBracket'),
+            new ErrorData(8, 'Squiz.Arrays.ArrayBracketSpacing.SpaceBeforeBracket'),
+
+            new ErrorData(13, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
+            new ErrorData(14, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
+            new ErrorData(15, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
+
+            new ErrorData(16, 'Generic.Arrays.ArrayIndent.CloseBraceIncorrect'),
+
+            new ErrorData(21, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
+            new ErrorData(22, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
+            new ErrorData(23, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
+            new ErrorData(24, 'Generic.Arrays.ArrayIndent.KeyIncorrect'),
+            new ErrorData(25, 'Generic.Arrays.ArrayIndent.CloseBraceIncorrect'),
+            new ErrorData(26, 'Generic.Arrays.ArrayIndent.CloseBraceIncorrect'),
+          ],
+        ];
     }
 }

@@ -51,4 +51,9 @@
     Array rules
     ++++++++++++++++++++++++++++++++++++-->
     <rule ref="Squiz.Arrays.ArrayBracketSpacing" />
+    <rule ref="Generic.Arrays.ArrayIndent">
+        <properties>
+            <property name="indent" value="2" />
+        </properties>
+    </rule>
 </ruleset>

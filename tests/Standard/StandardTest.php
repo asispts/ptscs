@@ -9,7 +9,8 @@ use Ptscs\Tests\Utils\SniffAssertion;
 final class StandardTest extends TestCase
 {
     private $excludes = ['PSR1.Classes.ClassDeclaration.MissingNamespace',
-    'PSR1.Files.SideEffects.FoundWithSymbols', 'Generic.PHP.RequireStrictTypes'];
+      'PSR1.Files.SideEffects.FoundWithSymbols', 'Generic.PHP.RequireStrictTypes'
+    ];
 
     /**
      * @dataProvider provideFileOnly
