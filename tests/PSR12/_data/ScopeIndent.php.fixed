@@ -1,0 +1,22 @@
+<?php
+
+if (true) {
+        $varA = 1;
+    $varB = 2; // Generic.WhiteSpace.ScopeIndent.Incorrect
+    $varC = 3;
+}
+
+class Dummy
+{
+    public function fn1()
+    {
+    } // Generic.WhiteSpace.ScopeIndent.IncorrectExact
+
+    public function fn1()
+    {
+    }
+
+    public function fn1()
+    {
+    }
+}

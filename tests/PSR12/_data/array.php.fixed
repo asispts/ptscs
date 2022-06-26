@@ -1,0 +1,10 @@
+<?php
+
+$array    =    array () ;
+$array      =   [  ] ;
+$myArray  [ 'key' ]   =   $value  ;
+$myArray   =    [  'key' => 'value' , 'key2'   =>    'value' ]  ;
+$myArray    =    [
+'key1'   =>    'value'
+        'key2'   =>    'value'
+]  ;

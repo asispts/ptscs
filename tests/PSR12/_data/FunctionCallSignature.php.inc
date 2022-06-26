@@ -1,0 +1,9 @@
+<?php
+
+printf(         '');
+printf(''       );
+printf
+('');
+printf('%s',
+$x
+);

@@ -31,13 +31,25 @@ final class SniffAssertion
     {
         $this->check($I, $data, $this->phpcs->getWarnings(), 'Warning');
     }
+
+    public function assertFixed(Assert $I, string $fixedfile): void
+    {
+        if ($this->phpcs->getFixableCount() <= 0) {
+            return;
+        }
+
+        $I->assertTrue($this->phpcs->fixer->fixFile());
+        $diff = $this->phpcs->fixer->generateDiff($fixedfile);
+        $I->assertSame('', $diff);
+    }
+
     /**
      * @param ErrorData[] $expected
      */
     private function check(Assert $I, array $expected, array $actual, string $info): void
     {
         $count = count($expected);
-        $I->assertSame($count, count($actual), $info . ' count');
+        $I->assertSame($count, count($actual), $info . ' count. Lines: ' . implode(', ', array_keys($actual)));
 
         if ($count <= 0) {
             return;
@@ -51,15 +63,22 @@ final class SniffAssertion
 
     private function checkItem(Assert $I, ErrorData $error, array $lines): void
     {
+        $rules  = [];
         foreach ($lines as $columns) {
             foreach ($columns as $item) {
+                $rules[] = $item['source'];
                 if ($this->checkSource($I, $error, $item) === true) {
                     return;
                 }
             }
         }
 
-        $I->fail(sprintf("Cannot find rule '%s' in line '%d'", $error->rule, $error->line));
+        $I->fail(sprintf(
+            "Cannot find rule '%s' in line '%d'. Rules: %s",
+            $error->rule,
+            $error->line,
+            implode('; ', $rules)
+        ));
     }
 
     private function checkSource(Assert $I, ErrorData $error, array $item): bool
