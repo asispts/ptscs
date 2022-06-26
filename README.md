@@ -41,10 +41,13 @@ Allow php tag and strict types in the same line.
 ```php
 public function test_something(): void
 {
-
 }
 ```
 4. Detect commented-out code.
+```php
+// Will warn about the next line
+// require_once $file;
+```
 5. Ban some built-in functions:
   - `sizeof`, use `count`
   - `print`, use `echo`
@@ -90,7 +93,7 @@ $array['key'] = 'value';
 $array['key'] = 'value';
 $array['key'] = 'value';
 ```
-10. Multiline array identation
+10. Multiline array indentation
 ```php
 function check(): void
 {
