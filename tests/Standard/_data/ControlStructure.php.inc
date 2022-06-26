@@ -1,5 +1,5 @@
 <?php
 
-if ($a ||
-$b ||
-$c) {}
+if ($a === false ||
+$b === false ||
+$c === false) {}

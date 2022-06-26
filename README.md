@@ -69,6 +69,20 @@ require_once $file;
 $var         = 'value';
 $longVarName = 'value';
 ```
+8. Implicit boolean in comparison operator is prohibited.
+```php
+// prohibited
+if ($value){
+}
+if (!$value){
+}
+
+// allowed
+if ($value === true){
+}
+if ($value === false){
+}
+```
 
 
 ## License

@@ -1,8 +1,8 @@
 <?php
 
 if (
-    $a ||
-    $b ||
-    $c
+    $a === false ||
+    $b === false ||
+    $c === false
 ) {
 }
