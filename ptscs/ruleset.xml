@@ -46,4 +46,9 @@
             </property>
         </properties>
     </rule>
+
+    <!--++++++++++++++++++++++++++++++++++++
+    Array rules
+    ++++++++++++++++++++++++++++++++++++-->
+    <rule ref="Squiz.Arrays.ArrayBracketSpacing" />
 </ruleset>

@@ -72,18 +72,24 @@ $longVarName = 'value';
 8. Implicit boolean in comparison operator is prohibited.
 ```php
 // prohibited
-if ($value){
-}
-if (!$value){
+if ($value1 || !$value2){
 }
 
 // allowed
-if ($value === true){
-}
-if ($value === false){
+if ($value1 === true || $value2 === false){
 }
 ```
+9. Array bracket spacing
+```php
+$array      ['key'] = 'value';
+$array[     'key'] = 'value';
+$array['key'       ] = 'value';
 
+// Will be fixed to
+$array['key'] = 'value';
+$array['key'] = 'value';
+$array['key'] = 'value';
+```
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).

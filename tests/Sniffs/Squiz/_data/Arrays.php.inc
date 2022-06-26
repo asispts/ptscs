@@ -1,0 +1,7 @@
+<?php
+
+$array      ['key'] = 'value';
+
+$array[     'key'] = 'value';
+
+$array['key'       ] = 'value';

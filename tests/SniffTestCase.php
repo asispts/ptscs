@@ -31,5 +31,10 @@ abstract class SniffTestCase extends TestCase
         $sniff = new SniffAssertion($filepath, $this->standard, $this->excludes);
         $sniff->assertError($this, $errorData);
         $sniff->assertWarning($this, $warningData);
+
+        $fixedfile = str_replace('.php.inc', '.php.fixed', $filepath);
+        if (file_exists($fixedfile) === true) {
+            $sniff->assertFixed($this, $fixedfile);
+        }
     }
 }
