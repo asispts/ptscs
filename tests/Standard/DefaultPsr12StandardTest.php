@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Ptscs\Tests\PSR12;
+namespace Ptscs\Tests\Standard;
 
 use Iterator;
 use PHPUnit\Framework\TestCase;
