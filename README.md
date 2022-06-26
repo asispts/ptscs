@@ -121,7 +121,18 @@ $var = 'value'      ;
 // will be formatted to
 $var = 'value';
 ```
+12. Language construct spacing
+```php
+// For example
+require$blah;
+require_once        'test';
+$a = new        stdClass();
 
+// will be formatted to
+require $blah;
+require_once 'test';
+$a = new stdClass();
+```
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).

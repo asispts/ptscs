@@ -11,7 +11,12 @@ final class WhitespaceTest extends SniffTestCase
     public function provideTestData(): Iterator
     {
         yield[
-          [new ErrorData(3, 'Squiz.WhiteSpace.SemicolonSpacing.Incorrect')],
+          [
+            new ErrorData(4, 'Squiz.WhiteSpace.SemicolonSpacing.Incorrect'),
+            new ErrorData(7, 'Squiz.WhiteSpace.LanguageConstructSpacing.Incorrect'),
+            new ErrorData(8, 'Squiz.WhiteSpace.LanguageConstructSpacing.Incorrect'),
+            new ErrorData(9, 'Squiz.WhiteSpace.LanguageConstructSpacing.Incorrect'),
+          ],
         ];
     }
 }
