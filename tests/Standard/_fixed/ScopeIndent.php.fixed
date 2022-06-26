@@ -1,7 +1,7 @@
 <?php
 
 if (true) {
-        $varA = 1;
+    $varA = 1;
     $varB = 2; // Generic.WhiteSpace.ScopeIndent.Incorrect
     $varC = 3;
 }

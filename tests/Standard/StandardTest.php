@@ -54,5 +54,7 @@ final class StandardTest extends TestCase
 
         yield 'array' => [$dir . '/array.php.fixed'];
         yield 'language' => [$dir . '/language.php.fixed'];
+        yield 'OperatorSpacing' => [$dir . '/OperatorSpacing.php.fixed'];
+        yield 'ScopeIndent' => [$dir . '/ScopeIndent.php.fixed'];
     }
 }

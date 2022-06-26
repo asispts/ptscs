@@ -12,11 +12,11 @@ class Dummy
     {
 }
 
-        public function fn1()
+        public function fn2()
 {
         }
 
-    public function fn1()
+    public function fn3()
         {
     }
 }
