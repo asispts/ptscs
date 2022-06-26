@@ -7,3 +7,7 @@ $var = 'value';
 require $blah;
 require_once 'test';
 $a = new stdClass();
+
+// Squiz.WhiteSpace.LogicalOperatorSpacing
+$a = $b && $c;
+$a = $b && $c;

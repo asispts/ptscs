@@ -133,6 +133,15 @@ require $blah;
 require_once 'test';
 $a = new stdClass();
 ```
+13. Logical operator spacing
+```php
+$a = $b             && $c;
+$a = $b &&              $c;
+
+// will be formatted to
+$a = $b && $c;
+$a = $b && $c;
+```
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
