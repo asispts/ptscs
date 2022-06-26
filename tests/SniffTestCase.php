@@ -10,7 +10,8 @@ use Ptscs\Tests\Utils\SniffAssertion;
 abstract class SniffTestCase extends TestCase
 {
     protected string $standard = 'ptscs';
-    protected array $excludes  = ['Generic.PHP.RequireStrictTypes'];
+
+    protected array $excludes = ['Generic.PHP.RequireStrictTypes'];
 
     abstract public function provideTestData(): Iterator;
 

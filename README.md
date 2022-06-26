@@ -114,7 +114,7 @@ function check(): void
     ];
 }
 ```
-11. Format semi-colon spacing
+11. Semi-colon spacing
 ```php
 $var = 'value'      ;
 
@@ -219,6 +219,15 @@ function fn1()
 
 function fn2()
 {
+}
+```
+21. Class member spacing
+```php
+class Foo
+{
+    private $foo;
+
+    private $bar;
 }
 ```
 

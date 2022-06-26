@@ -11,6 +11,7 @@ final class Classes extends PDO implements Traversable
     use sometrait;
 
     private $var1;
+
     private $var2;
 
     public function __construct()
