@@ -85,10 +85,31 @@ $array      ['key'] = 'value';
 $array[     'key'] = 'value';
 $array['key'       ] = 'value';
 
-// Will be fixed to
+// Will be formatted to
 $array['key'] = 'value';
 $array['key'] = 'value';
 $array['key'] = 'value';
+```
+10. Multiline array identation
+```php
+function check(): void
+{
+                return $myArray ===          [
+                    'key1'      =>          'value',
+                                'key-long-long-long'          =>  'value',
+'key-medium'      =>      'value'
+                    ];
+}
+
+// Will be formatted to
+function check(): void
+{
+    return $myArray === [
+      'key1'               => 'value',
+      'key-long-long-long' => 'value',
+      'key-medium'         => 'value',
+    ];
+}
 ```
 
 ## License
