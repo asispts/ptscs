@@ -142,6 +142,21 @@ $a = $b &&              $c;
 $a = $b && $c;
 $a = $b && $c;
 ```
+14. Object operator spacing
+```php
+$this   ->testThis();
+$this->     testThis();
+
+parent      ::testThis();
+parent::    testThis();
+
+// will be formatted to
+$this->testThis();
+$this->testThis();
+
+parent::testThis();
+parent::testThis();
+```
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).

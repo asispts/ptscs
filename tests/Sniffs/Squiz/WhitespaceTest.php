@@ -18,6 +18,10 @@ final class WhitespaceTest extends SniffTestCase
             new ErrorData(9, 'Squiz.WhiteSpace.LanguageConstructSpacing.Incorrect'),
             new ErrorData(12, 'Squiz.WhiteSpace.LogicalOperatorSpacing.TooMuchSpaceBefore'),
             new ErrorData(13, 'Squiz.WhiteSpace.LogicalOperatorSpacing.TooMuchSpaceAfter'),
+            new ErrorData(16, 'Squiz.WhiteSpace.ObjectOperatorSpacing.Before'),
+            new ErrorData(17, 'Squiz.WhiteSpace.ObjectOperatorSpacing.After'),
+            new ErrorData(18, 'Squiz.WhiteSpace.ObjectOperatorSpacing.Before'),
+            new ErrorData(19, 'Squiz.WhiteSpace.ObjectOperatorSpacing.After'),
           ],
         ];
     }

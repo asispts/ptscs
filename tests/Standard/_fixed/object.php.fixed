@@ -1,0 +1,7 @@
+<?php
+
+$this->testThis();
+$this->testThis();
+
+parent::testThis();
+parent::testThis();

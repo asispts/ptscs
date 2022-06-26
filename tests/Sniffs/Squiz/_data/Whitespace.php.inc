@@ -11,3 +11,9 @@ $a = new        stdClass();
 // Squiz.WhiteSpace.LogicalOperatorSpacing
 $a = $b             && $c;
 $a = $b &&              $c;
+
+// Squiz.WhiteSpace.ObjectOperatorSpacing
+$this   ->testThis();
+$this->     testThis();
+parent      ::testThis();
+parent::    testThis();
