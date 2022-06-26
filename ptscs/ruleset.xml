@@ -101,5 +101,6 @@
         </properties>
     </rule>
     <rule ref="Squiz.Strings.EchoedStrings" />
+    <rule ref="Squiz.Strings.DoubleQuoteUsage" />
 
 </ruleset>

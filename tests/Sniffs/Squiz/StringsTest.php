@@ -18,6 +18,7 @@ final class StringsTest extends SniffTestCase
             new ErrorData(11, 'Squiz.Strings.ConcatenationSpacing.PaddingFound'),
             new ErrorData(14, 'Squiz.Strings.ConcatenationSpacing.PaddingFound'),
             new ErrorData(19, 'Squiz.Strings.EchoedStrings.HasBracket'),
+            new ErrorData(23, 'Squiz.Strings.DoubleQuoteUsage.NotRequired'),
           ],
         ];
     }

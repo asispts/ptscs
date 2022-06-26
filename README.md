@@ -188,6 +188,14 @@ echo('Should not be bracketed');
 echo 'Should not be bracketed';
 ```
 
+18. Double quote is used in escaped string only
+```php
+echo "Double quote is not required here";
+
+// will be formatted to
+echo 'Double quote is not required here';
+```
+
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
 See [LICENSE](https://github.com/asispts/ptscs/blob/master/LICENSE) file.
