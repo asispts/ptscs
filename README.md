@@ -230,6 +230,12 @@ class Foo
     private $bar;
 }
 ```
+22. Support fluent interface
+```php
+$obj->add('value 1')
+    ->add('value 2')
+    ->add('value 3');
+```
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).

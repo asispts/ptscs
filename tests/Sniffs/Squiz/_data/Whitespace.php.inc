@@ -21,3 +21,8 @@ parent::    testThis();
 // Generic.Formatting.SpaceAfterCast
 (int)$var;
 (int)       $var;
+
+// PEAR.WhiteSpace.ObjectOperatorIndent
+$obj->add('value 1')
+            ->add('value 2')
+->add('value 3');

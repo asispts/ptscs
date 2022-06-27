@@ -82,10 +82,9 @@
             <property name="indent" value="4" />
             <property name="exact" value="true" />
             <property name="tabIndent" value="false" />
-            <!-- T_IMPLEMENTS -->
-            <property name="ignoreIndentationTokens" type="array">
+            <!-- <property name="ignoreIndentationTokens" type="array">
                 <element value="T_CLASS" />
-            </property>
+            </property> -->
         </properties>
     </rule>
 
@@ -96,8 +95,17 @@
     <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
     <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing" />
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing" />
-    <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing" />
     <rule ref="Generic.Formatting.SpaceAfterCast" />
+
+    <!--++++++++++++++++++++++++++++++++++++
+    Allow fluent interface
+    ++++++++++++++++++++++++++++++++++++-->
+    <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing">
+        <properties>
+            <property name="ignoreNewlines" value="true" />
+        </properties>
+    </rule>
+    <rule ref="PEAR.WhiteSpace.ObjectOperatorIndent" />
 
     <!--++++++++++++++++++++++++++++++++++++
     String rules

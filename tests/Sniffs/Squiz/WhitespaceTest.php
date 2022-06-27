@@ -24,6 +24,9 @@ final class WhitespaceTest extends SniffTestCase
             new ErrorData(19, 'Squiz.WhiteSpace.ObjectOperatorSpacing.After'),
             new ErrorData(22, 'Generic.Formatting.SpaceAfterCast.NoSpace'),
             new ErrorData(23, 'Generic.Formatting.SpaceAfterCast.TooMuchSpace'),
+
+            new ErrorData(27, 'PEAR.WhiteSpace.ObjectOperatorIndent.Incorrect'),
+            new ErrorData(28, 'PEAR.WhiteSpace.ObjectOperatorIndent.Incorrect'),
           ],
         ];
     }
