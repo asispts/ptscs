@@ -1,6 +1,6 @@
 {
   "name": "asispts/ptscs",
-  "description": "PSR-12 based PHP coding standard",
+  "description": "PSR-12 coding standard with some strict rules",
   "type": "phpcodesniffer-standard",
   "license": "MIT",
   "authors": [
@@ -32,9 +32,7 @@
   },
   "require": {
     "php": ">=5.4.0",
-    "dealerdirect/phpcodesniffer-composer-installer": "0.*"
-  },
-  "require-dev": {
-    "asispts/phpunit-stubs": "^9.5"
+    "dealerdirect/phpcodesniffer-composer-installer": "0.*",
+    "squizlabs/php_codesniffer": "^3.7"
   }
 }
