@@ -11,6 +11,7 @@ final class ClassPropertyTest extends SniffTestCase
     protected function setUp(): void
     {
         $this->excludes[] = 'PSR1.Classes.ClassDeclaration.MissingNamespace';
+        $this->excludes[] = 'Squiz.Classes.ClassFileName';
     }
 
     public function provideTestData(): Iterator

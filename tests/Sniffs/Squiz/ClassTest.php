@@ -8,6 +8,11 @@ use Ptscs\Tests\Utils\ErrorData;
 
 final class ClassTest extends SniffTestCase
 {
+    protected function setUp(): void
+    {
+        $this->excludes[] = 'Squiz.Classes.ClassFileName';
+    }
+
     public function provideTestData(): Iterator
     {
         yield[

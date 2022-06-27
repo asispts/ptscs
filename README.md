@@ -236,6 +236,7 @@ $obj->add('value 1')
     ->add('value 2')
     ->add('value 3');
 ```
+23. Ensure filename have to match the class name
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
