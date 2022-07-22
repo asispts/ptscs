@@ -19,7 +19,12 @@
     ++++++++++++++++++++++++++++++++++++-->
     <rule ref="Squiz.Classes.ClassFileName" />
     <rule ref="Generic.PHP.RequireStrictTypes" />
-    <rule ref="Squiz.PHP.CommentedOutCode" />
+    <rule ref="Squiz.PHP.CommentedOutCode">
+        <properties>
+            <!-- Report when > 50% valid code only -->
+            <property name="maxPercentage" value="50" />
+        </properties>
+    </rule>
     <rule ref="PEAR.Files.IncludingFile.BracketsNotRequired" />
     <rule ref="Generic.Formatting.MultipleStatementAlignment" />
 

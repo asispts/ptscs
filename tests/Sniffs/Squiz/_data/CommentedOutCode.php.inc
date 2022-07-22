@@ -1,11 +1,12 @@
 <?php
 
-// final class CommentedOutCodeTest extends SniffTestCase
+/** Contains 60% valid code */
+// function fn()
+
+/** Contains 50% valid code */
+// |<?php
+
+/** Contains 46% valid code */
+// function fn()
 // {
-//     private const RULE = 'Squiz.PHP.CommentedOutCode';
-//     public function provideTestData(): Iterator
-//     {
-//         $err = new ErrorData(3, 0, self::RULE, '');
-//         yield[[$err], [$err]];
-//     }
 // }
