@@ -10,11 +10,9 @@ final class ComparisonOperatorUsageTest extends SniffTestCase
 {
     public function provideTestData(): Iterator
     {
+      // Allow ! operator
         yield[
-          [
-            new ErrorData(3, 'Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue'),
-            new ErrorData(6, 'Squiz.Operators.ComparisonOperatorUsage.NotAllowed'),
-          ],
+          [],
         ];
     }
 }
