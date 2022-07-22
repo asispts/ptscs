@@ -121,7 +121,9 @@
         </properties>
     </rule>
     <rule ref="Squiz.Strings.EchoedStrings" />
-    <rule ref="Squiz.Strings.DoubleQuoteUsage" />
+    <rule ref="Squiz.Strings.DoubleQuoteUsage">
+        <exclude name="Squiz.Strings.DoubleQuoteUsage.ContainsVar" />
+    </rule>
 
 
     <!--++++++++++++++++++++++++++++++++++++

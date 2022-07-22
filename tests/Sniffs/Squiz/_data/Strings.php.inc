@@ -21,3 +21,5 @@ echo('Should not be bracketed');
 
 // Squiz.Strings.DoubleQuoteUsage
 echo "Double quote is not required here";
+
+echo "Hello $var";
