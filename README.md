@@ -16,11 +16,13 @@ composer require --dev asispts/ptscs
 Create `phpcs.xml.dist`
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset>
-    <arg name="colors"/>
-    <arg name="parallel" value="8"/>
-    <arg value="psv"/>
-    <arg name="extensions" value="php"/>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
+
+  <arg name="colors"/>
+  <arg name="parallel" value="8"/>
+  <arg value="psv"/>
+  <arg name="extensions" value="php"/>
 
   <file>src</file>
   <file>tests</file>
