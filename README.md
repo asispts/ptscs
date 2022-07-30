@@ -1,3 +1,8 @@
+[![](https://img.shields.io/github/license/asispts/ptscs)](./LICENSE)
+[![](https://img.shields.io/packagist/php-v/asispts/ptscs/dev-main)](https://github.com/asispts/ptscs)
+[![](https://img.shields.io/packagist/dt/asispts/ptscs)](https://packagist.org/packages/asispts/ptscs)
+
+
 # `ptscs`
 > PSR-12 coding standard with some strict styles
 
@@ -240,4 +245,4 @@ $obj->add('value 1')
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
-See [LICENSE](https://github.com/asispts/ptscs/blob/master/LICENSE) file.
+See [LICENSE](./LICENSE) file.
