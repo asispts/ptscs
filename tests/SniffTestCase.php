@@ -33,6 +33,7 @@ abstract class SniffTestCase extends TestCase
         ];
 
         $filepath = implode(DIRECTORY_SEPARATOR, $paths);
+        $this->assertFileExists($filepath);
 
         $sniff = new SniffAssertion($filepath, $this->standard, $this->excludes);
         $sniff->assertError($this, $errorData);
