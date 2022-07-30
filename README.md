@@ -4,7 +4,7 @@
 
 
 # `ptscs`
-> PSR-12 coding standard with some strict styles
+> PSR-12 coding standard with some additional strict rules
 
 ## Installation
 Install with composer
@@ -244,6 +244,7 @@ $obj->add('value 1')
     ->add('value 3');
 ```
 23. Ensure filename have to match the class name
+24. Forbid final methods in final classes
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
