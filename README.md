@@ -245,6 +245,10 @@ $obj->add('value 1')
 ```
 23. Ensure filename have to match the class name
 24. Forbid final methods in final classes
+25. Disallow long array syntax
+```php
+$arr = array(); // not allowedgit a
+```
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).

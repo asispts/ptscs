@@ -1,6 +1,5 @@
 <?php
 
-$array          = array();
 $array          = [];
 $myArray['key'] = $value;
 $myArray        = [  'key' => 'value' , 'key2' => 'value' ];

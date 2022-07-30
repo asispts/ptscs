@@ -93,6 +93,9 @@
         </properties>
     </rule>
 
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+
+
     <!--++++++++++++++++++++++++++++++++++++
     Whitespace
     ++++++++++++++++++++++++++++++++++++-->
