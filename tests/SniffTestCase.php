@@ -9,11 +9,21 @@ use Ptscs\Tests\Utils\SniffAssertion;
 
 abstract class SniffTestCase extends TestCase
 {
+    private array $excludes = ['Generic.PHP.RequireStrictTypes'];
+
     protected string $standard = 'ptscs';
 
-    protected array $excludes = ['Generic.PHP.RequireStrictTypes'];
-
     abstract public function provideTestData(): Iterator;
+
+    protected function setExclude(array $values): void
+    {
+        $this->excludes = $values;
+    }
+
+    protected function appendExclude(string $value): void
+    {
+        $this->excludes[] = $value;
+    }
 
     /**
      * @dataProvider provideTestData

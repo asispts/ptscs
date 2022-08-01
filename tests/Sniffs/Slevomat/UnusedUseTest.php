@@ -11,8 +11,7 @@ final class UnusedUseTest extends SniffTestCase
     protected function setUp(): void
     {
         parent::setUp();
-
-        $this->excludes = ['Squiz.Classes.ClassFileName.NoMatch'];
+        $this->setExclude(['Squiz.Classes.ClassFileName.NoMatch']);
     }
 
     public function provideTestData(): Iterator

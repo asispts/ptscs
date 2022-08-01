@@ -10,7 +10,7 @@ final class ClassTest extends SniffTestCase
 {
     protected function setUp(): void
     {
-        $this->excludes[] = 'Squiz.Classes.ClassFileName';
+        $this->setExclude(['Squiz.Classes.ClassFileName']);
     }
 
     public function provideTestData(): Iterator

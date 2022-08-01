@@ -11,7 +11,7 @@ final class StrictTypesTest extends SniffTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->excludes = [];
+        $this->setExclude([]);
     }
 
     public function provideTestData(): Iterator

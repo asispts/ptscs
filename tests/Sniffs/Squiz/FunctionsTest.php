@@ -10,7 +10,7 @@ final class FunctionsTest extends SniffTestCase
 {
     protected function setUp(): void
     {
-        $this->excludes[] = 'PSR1.Files.SideEffects.FoundWithSymbols';
+        $this->appendExclude('PSR1.Files.SideEffects.FoundWithSymbols');
     }
 
     public function provideTestData(): Iterator

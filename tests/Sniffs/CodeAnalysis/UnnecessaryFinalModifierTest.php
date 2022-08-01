@@ -11,12 +11,11 @@ final class UnnecessaryFinalModifierTest extends SniffTestCase
     protected function setUp(): void
     {
         parent::setUp();
-
-        $this->excludes = [
+        $this->setExclude([
           'Squiz.Classes.ClassFileName.NoMatch',
           'PSR1.Classes.ClassDeclaration.MultipleClasses',
           'SlevomatCodingStandard.Classes.RequireAbstractOrFinal',
-        ];
+        ]);
     }
 
     public function provideTestData(): Iterator
