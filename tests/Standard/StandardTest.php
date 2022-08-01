@@ -13,6 +13,7 @@ final class StandardTest extends TestCase
       'PSR1.Files.SideEffects.FoundWithSymbols',
       'Generic.PHP.RequireStrictTypes',
       'SlevomatCodingStandard.Classes.RequireAbstractOrFinal',
+      'SlevomatCodingStandard.Namespaces.UnusedUses',
     ];
 
     /**

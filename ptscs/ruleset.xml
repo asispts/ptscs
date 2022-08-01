@@ -151,6 +151,11 @@
     Slevomat
     ++++++++++++++++++++++++++++++++++++-->
     <rule ref="SlevomatCodingStandard.Classes.RequireAbstractOrFinal" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
+        <properties>
+            <property name="searchAnnotations" value="true" />
+        </properties>
+    </rule>
 
     <!--++++++++++++++++++++++++++++++++++++
     Code analysis

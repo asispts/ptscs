@@ -250,6 +250,7 @@ $obj->add('value 1')
 $arr = array(); // not allowedgit a
 ```
 26. All classes should be a `final` or `abstract`
+27. Remove unused `use`
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
