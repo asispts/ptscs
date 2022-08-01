@@ -1,8 +1,10 @@
-<?php declare(strict_types=1);
-namespace Acme;
-use stdClass;
-use Stringable;
+<?php
+
+
+declare(strict_types=1);
+namespace Acme;use stdClass;
 use Traversable;
+use Stringable;
 final class FooBar
 extends stdClass
 implements Traversable, Stringable

@@ -1,8 +1,11 @@
 <?php declare(strict_types=1);
+
 namespace Acme;
+
 use stdClass;
 use Stringable;
 use Traversable;
+
 final class FooBar extends stdClass implements Traversable, Stringable
 {
     use sometraits;

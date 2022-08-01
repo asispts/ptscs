@@ -2,9 +2,9 @@
 
 namespace Ptscs\Tests;
 
+use Iterator;
 use PDO;
 use Traversable;
-use Iterator;
 
 final class Classes extends PDO implements Traversable
 {

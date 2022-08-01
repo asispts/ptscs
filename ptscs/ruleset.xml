@@ -161,6 +161,11 @@
             <property name="spacesCountAroundEqualsSign" value="false" />
         </properties>
     </rule>
+    <!-- Format class namespace and uses -->
+    <rule ref="SlevomatCodingStandard.Namespaces.NamespaceSpacing" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UseSpacing" />
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
+
 
     <!--++++++++++++++++++++++++++++++++++++
     Code analysis
