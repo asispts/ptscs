@@ -48,11 +48,11 @@ final class SniffAssertion
      */
     private function check(Assert $I, array $expected, array $actual, string $info): void
     {
-        $count = count($expected);
-        $I->assertSame($count, count($actual), $info . ' count. Lines: ' . implode(', ', array_keys($actual)));
+        $count = \count($expected);
+        $I->assertSame($count, \count($actual), $info . ' count. Lines: ' . \implode(', ', \array_keys($actual)));
 
         foreach ($expected as $item) {
-            $I->assertArrayHasKey($item->line, $actual, 'lines: ' . implode(', ', array_keys($actual)));
+            $I->assertArrayHasKey($item->line, $actual, 'lines: ' . \implode(', ', \array_keys($actual)));
             $this->checkItem($I, $item, $actual[$item->line]);
         }
     }
@@ -69,11 +69,11 @@ final class SniffAssertion
             }
         }
 
-        $I->fail(sprintf(
+        $I->fail(\sprintf(
             "Cannot find rule '%s' in line '%d'. Rules: %s",
             $error->rule,
             $error->line,
-            implode('; ', $rules)
+            \implode('; ', $rules)
         ));
     }
 
@@ -83,7 +83,7 @@ final class SniffAssertion
             return false;
         }
 
-        if (substr($item['source'], 0, strlen($error->rule)) !== $error->rule) {
+        if (\substr($item['source'], 0, \strlen($error->rule)) !== $error->rule) {
             return false;
         }
 

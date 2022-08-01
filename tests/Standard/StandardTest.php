@@ -39,7 +39,7 @@ final class StandardTest extends TestCase
      */
     public function test_fix_psr12(string $filepath): void
     {
-        $fixedfile = str_replace('_data', '_fixed', $filepath);
+        $fixedfile = \str_replace('_data', '_fixed', $filepath);
 
         $sniff = new SniffAssertion($filepath, 'ptscs', $this->excludes);
         $sniff->assertFixed($this, $fixedfile);

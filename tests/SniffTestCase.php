@@ -33,24 +33,24 @@ abstract class SniffTestCase extends TestCase
      */
     public function test_sniffs(array $errorData = [], array $warningData = []): void
     {
-        $names    = explode('\\', static::class);
-        $filename = str_replace('Test', '', array_pop($names));
+        $names    = \explode('\\', static::class);
+        $filename = \str_replace('Test', '', \array_pop($names));
         $paths    = [
           __DIR__,
-          ...array_slice($names, 2),
+          ...\array_slice($names, 2),
           '_data',
           $filename . '.php.inc',
         ];
 
-        $filepath = implode(DIRECTORY_SEPARATOR, $paths);
+        $filepath = \implode(DIRECTORY_SEPARATOR, $paths);
         $this->assertFileExists($filepath);
 
         $sniff = new SniffAssertion($filepath, $this->standard, $this->excludes);
         $sniff->assertError($this, $errorData);
         $sniff->assertWarning($this, $warningData);
 
-        $fixedfile = str_replace('.php.inc', '.php.fixed', $filepath);
-        if (file_exists($fixedfile) === true) {
+        $fixedfile = \str_replace('.php.inc', '.php.fixed', $filepath);
+        if (\file_exists($fixedfile) === true) {
             $sniff->assertFixed($this, $fixedfile);
         }
     }
