@@ -12,6 +12,7 @@ final class StandardTest extends TestCase
       'PSR1.Classes.ClassDeclaration.MissingNamespace',
       'PSR1.Files.SideEffects.FoundWithSymbols',
       'Generic.PHP.RequireStrictTypes',
+      'SlevomatCodingStandard.Classes.RequireAbstractOrFinal',
     ];
 
     /**

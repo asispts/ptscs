@@ -148,9 +148,15 @@
 
 
     <!--++++++++++++++++++++++++++++++++++++
+    Slevomat
+    ++++++++++++++++++++++++++++++++++++-->
+    <rule ref="SlevomatCodingStandard.Classes.RequireAbstractOrFinal" />
+
+    <!--++++++++++++++++++++++++++++++++++++
     Code analysis
     ++++++++++++++++++++++++++++++++++++-->
     <!-- Forbid final methods in final classes -->
     <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier" />
+
 
 </ruleset>

@@ -15,6 +15,7 @@ final class UnnecessaryFinalModifierTest extends SniffTestCase
         $this->excludes = [
           'Squiz.Classes.ClassFileName.NoMatch',
           'PSR1.Classes.ClassDeclaration.MultipleClasses',
+          'SlevomatCodingStandard.Classes.RequireAbstractOrFinal',
         ];
     }
 

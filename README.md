@@ -249,6 +249,7 @@ $obj->add('value 1')
 ```php
 $arr = array(); // not allowedgit a
 ```
+26. All classes should be a `final` or `abstract`
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
