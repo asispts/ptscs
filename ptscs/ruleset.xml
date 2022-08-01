@@ -18,7 +18,6 @@
     Additional rules
     ++++++++++++++++++++++++++++++++++++-->
     <rule ref="Squiz.Classes.ClassFileName" />
-    <rule ref="Generic.PHP.RequireStrictTypes" />
     <rule ref="Squiz.PHP.CommentedOutCode">
         <properties>
             <!-- Report when > 50% valid code only -->
@@ -154,6 +153,12 @@
     <rule ref="SlevomatCodingStandard.Namespaces.UnusedUses">
         <properties>
             <property name="searchAnnotations" value="true" />
+        </properties>
+    </rule>
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+        <properties>
+            <property name="declareOnFirstLine" value="true" />
+            <property name="spacesCountAroundEqualsSign" value="false" />
         </properties>
     </rule>
 

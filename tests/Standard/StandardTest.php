@@ -11,7 +11,7 @@ final class StandardTest extends TestCase
     private $excludes = [
       'PSR1.Classes.ClassDeclaration.MissingNamespace',
       'PSR1.Files.SideEffects.FoundWithSymbols',
-      'Generic.PHP.RequireStrictTypes',
+      'SlevomatCodingStandard.TypeHints.DeclareStrictTypes',
       'SlevomatCodingStandard.Classes.RequireAbstractOrFinal',
       'SlevomatCodingStandard.Namespaces.UnusedUses',
     ];

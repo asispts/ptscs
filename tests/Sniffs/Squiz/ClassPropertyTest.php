@@ -10,12 +10,10 @@ final class ClassPropertyTest extends SniffTestCase
 {
     protected function setUp(): void
     {
-        $this->setExclude([
-          'PSR1.Classes.ClassDeclaration.MissingNamespace',
-          'Squiz.Classes.ClassFileName',
-          'Generic.PHP.RequireStrictTypes.MissingDeclaration',
-          'SlevomatCodingStandard.Classes.RequireAbstractOrFinal',
-        ]);
+        $this->appendExclude('PSR1.Classes.ClassDeclaration.MissingNamespace');
+        $this->appendExclude('Squiz.Classes.ClassFileName');
+        $this->appendExclude('Generic.PHP.RequireStrictTypes.MissingDeclaration');
+        $this->appendExclude('SlevomatCodingStandard.Classes.RequireAbstractOrFinal');
     }
 
     public function provideTestData(): Iterator
