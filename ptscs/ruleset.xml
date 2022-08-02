@@ -167,6 +167,7 @@
     <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
     <rule ref="SlevomatCodingStandard.Namespaces.DisallowGroupUse" />
     <rule ref="SlevomatCodingStandard.Namespaces.MultipleUsesPerLine" />
+    <rule ref="SlevomatCodingStandard.Namespaces.UseFromSameNamespace" />
 
     <!-- Fully qualified exceptions and global functions -->
     <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedExceptions" />
