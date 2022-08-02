@@ -17,7 +17,7 @@ final class DefaultPsr12StandardTest extends TestCase
     /**
      * @dataProvider provideTestData
      */
-    public function test_fixed_files_should_not_produce_erros(string $filename): void
+    public function test_fixed_files_should_not_produce_errors(string $filename): void
     {
         $fixedfile = __DIR__ . '/_data/' . $filename . '.php.fixed';
 
