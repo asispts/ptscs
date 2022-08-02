@@ -1,0 +1,9 @@
+<?php
+
+namespace App;
+
+use App\Entity\Dummy;
+
+final class Foobar extends Dummy
+{
+}
