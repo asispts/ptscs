@@ -50,8 +50,7 @@ abstract class SniffTestCase extends TestCase
         $sniff->assertWarning($this, $warningData);
 
         $fixedfile = \str_replace('.php.inc', '.php.fixed', $filepath);
-        if (\file_exists($fixedfile) === true) {
-            $sniff->assertFixed($this, $fixedfile);
-        }
+        $this->assertFileExists($fixedfile);
+        $sniff->assertFixed($this, $fixedfile);
     }
 }
