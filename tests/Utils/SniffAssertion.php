@@ -34,11 +34,10 @@ final class SniffAssertion
 
     public function assertFixed(Assert $I, string $fixedfile): void
     {
-        if ($this->phpcs->getFixableCount() <= 0) {
-            return;
+        if ($this->phpcs->getFixableCount() > 0) {
+            $I->assertTrue($this->phpcs->fixer->fixFile());
         }
 
-        $I->assertTrue($this->phpcs->fixer->fixFile());
         $diff = $this->phpcs->fixer->generateDiff($fixedfile);
         $I->assertSame('', $diff);
     }
