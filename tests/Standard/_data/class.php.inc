@@ -1,7 +1,7 @@
 <?php
 namespace Ptscs\Tests;
 use PDO;use Traversable;
-use Iterator;
+use \Iterator;
 final class Classes
 extends PDO
 implements Traversable
