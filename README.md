@@ -251,7 +251,7 @@ $arr = array(); // not allowedgit a
 ```
 26. All classes should be a `final` or `abstract`
 27. Remove unused `use`
-28. Fully qualified exceptions and global functions
+28. Fully qualified global functions
 29. Disallow group `use`
 30. Disallow multiple `use` per line
 31. Disallow `use` from same namespace

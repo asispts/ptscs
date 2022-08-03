@@ -2,7 +2,7 @@
 
 namespace App;
 
-final class FooException extend Exception
+final class FooException extends Exception
 {
     private $values;
 
