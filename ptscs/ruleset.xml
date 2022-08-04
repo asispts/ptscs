@@ -172,6 +172,12 @@
 
     <!-- Fully qualified exceptions and global functions -->
     <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions" />
+    <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
+        <properties>
+            <property name="searchAnnotations" value="true" />
+            <property name="allowFullyQualifiedGlobalFunctions" value="true" />
+        </properties>
+    </rule>
 
 
     <!--++++++++++++++++++++++++++++++++++++

@@ -1,0 +1,25 @@
+<?php declare(strict_types=1);
+
+namespace App\Tests;
+
+use App\Exception\CustomException;
+use Codeception\Test\Unit;
+use PDO;
+
+final class Foobar extends Unit
+{
+    /**
+     * @var FunctionalTester
+     */
+    protected $tester;
+
+    public function __invoke()
+    {
+        // Should allow fully qualified global namespace
+        $root = \dirname(__DIR__);
+
+        $pdo = new PDO();
+
+        throw new CustomException('Error Processing Request', 1);
+    }
+}
