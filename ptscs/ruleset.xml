@@ -179,6 +179,8 @@
         </properties>
     </rule>
 
+    <rule ref="SlevomatCodingStandard.Variables.UselessVariable" />
+
 
     <!--++++++++++++++++++++++++++++++++++++
     Code analysis

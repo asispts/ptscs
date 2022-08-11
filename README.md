@@ -257,6 +257,7 @@ $arr = array(); // not allowedgit a
 31. Disallow `use` from same namespace
 32. Detect useless alias
 33. Reference used name only (`SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly`)
+34. Detect useless variable declaration
 
 ## License
 Released under [MIT License](https://opensource.org/licenses/MIT).
