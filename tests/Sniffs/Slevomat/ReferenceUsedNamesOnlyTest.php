@@ -11,7 +11,10 @@ final class ReferenceUsedNamesOnlyTest extends SniffTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->setExclude(['Squiz.Classes.ClassFileName.NoMatch']);
+        $this->setExclude([
+          'Squiz.Classes.ClassFileName.NoMatch',
+          'SlevomatCodingStandard.Variables.UnusedVariable',
+        ]);
     }
 
     public function provideTestData(): Iterator

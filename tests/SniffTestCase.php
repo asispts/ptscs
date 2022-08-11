@@ -9,7 +9,10 @@ use Ptscs\Tests\Utils\SniffAssertion;
 
 abstract class SniffTestCase extends TestCase
 {
-    private array $excludes = ['SlevomatCodingStandard.TypeHints.DeclareStrictTypes'];
+    private array $excludes = [
+      'SlevomatCodingStandard.TypeHints.DeclareStrictTypes',
+      'SlevomatCodingStandard.Variables.UnusedVariable',
+    ];
 
     protected string $standard = 'ptscs';
 
