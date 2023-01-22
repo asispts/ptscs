@@ -4,7 +4,8 @@ namespace App;
 
 class Foobar
 {
-    public function __invoke()
-    {
-    }
+}
+
+readonly class ReadonlyClass
+{
 }

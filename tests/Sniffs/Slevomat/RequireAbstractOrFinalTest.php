@@ -11,14 +11,15 @@ final class RequireAbstractOrFinalTest extends SniffTestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->setExclude(['Squiz.Classes.ClassFileName.NoMatch']);
+        $this->setExclude(['Squiz.Classes.ClassFileName.NoMatch', 'PSR1.Classes.ClassDeclaration.MultipleClasses']);
     }
 
     public function provideTestData(): Iterator
     {
         yield[
           [
-            new ErrorData(4, 'SlevomatCodingStandard.Classes.RequireAbstractOrFinal'),
+            new ErrorData(5, 'SlevomatCodingStandard.Classes.RequireAbstractOrFinal'),
+            new ErrorData(9, 'SlevomatCodingStandard.Classes.RequireAbstractOrFinal'),
           ],
         ];
     }

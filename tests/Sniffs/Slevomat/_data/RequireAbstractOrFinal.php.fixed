@@ -4,7 +4,8 @@ namespace App;
 
 final class Foobar
 {
-    public function __invoke()
-    {
-    }
+}
+
+readonly final class ReadonlyClass
+{
 }

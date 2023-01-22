@@ -12,6 +12,8 @@
         <!-- Allow <?php declare(strict_types=1); in the same line -->
         <exclude name="PSR12.Files.OpenTag.NotAlone" />
         <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock" />
+        <!-- There is a bug when dealing with readonly class. See squizlabs/PHP_CodeSniffer#3727 -->
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols" />
     </rule>
 
     <!--++++++++++++++++++++++++++++++++++++
@@ -77,7 +79,8 @@
       $a = 1;
           $b = 2;
 
-      These lines should be like this
+      These lines should be
+    like this
       $a = 1;
       $b = 2;
     -->
@@ -87,7 +90,8 @@
             <property name="exact" value="true" />
             <property name="tabIndent" value="false" />
             <!-- <property name="ignoreIndentationTokens" type="array">
-                <element value="T_CLASS" />
+                <element
+            value="T_CLASS" />
             </property> -->
         </properties>
     </rule>
