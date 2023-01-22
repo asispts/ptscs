@@ -32,7 +32,7 @@
   },
   "require": {
     "php": "^7.2 || ^8.0",
-    "dealerdirect/phpcodesniffer-composer-installer": "0.*",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
     "slevomat/coding-standard": "^8.3",
     "squizlabs/php_codesniffer": "^3.7"
   },
