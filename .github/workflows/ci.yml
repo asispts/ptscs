@@ -12,6 +12,7 @@ jobs:
             matrix:
                 operating-system: [ubuntu-latest]
                 php-versions: ["7.2", "7.3", "7.4", "8.0", "8.1", "8.2"]
+                mode: [low, high]
 
         runs-on: ${{ matrix.operating-system }}
         steps:
@@ -33,14 +34,13 @@ jobs:
               uses: actions/cache@v3
               with:
                   path: ${{ steps.composer-cache-dir.outputs.dir }}
-                  key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
-                  restore-keys: ${{ runner.os }}-composer-
+                  key: ${{ runner.os }}-${{ matrix.php-versions }}-${{ matrix.mode }}-composer-${{ hashFiles('**/composer.json') }}
+                  restore-keys: ${{ runner.os }}-${{ matrix.php-versions }}-${{ matrix.mode }}-composer-
 
             - name: Install dependencies
-              run: composer install --no-progress
-
-            - name: Install phpunit
-              run: composer req --dev phpunit/phpunit
+              run: |
+                  [[ "${{ matrix.mode }}" = "low" ]] && composer update --no-progress --prefer-lowest || true
+                  [[ "${{ matrix.mode }}" = "high" ]] && composer update --no-progress || true
 
             - name: Show phpunit version
               run: vendor/bin/phpunit --version
