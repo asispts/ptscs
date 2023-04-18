@@ -16,7 +16,7 @@ final class ClassPropertyTest extends SniffTestCase
         $this->appendExclude('SlevomatCodingStandard.Classes.RequireAbstractOrFinal');
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

@@ -18,7 +18,7 @@ final class UnnecessaryFinalModifierTest extends SniffTestCase
         ]);
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [],

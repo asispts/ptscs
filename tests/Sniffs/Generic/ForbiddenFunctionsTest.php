@@ -10,7 +10,7 @@ final class ForbiddenFunctionsTest extends SniffTestCase
 {
     private const RULE = 'Generic.PHP.ForbiddenFunctions';
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         $text = [
           'sizeof',

@@ -14,7 +14,7 @@ final class FormatDeclareTest extends SniffTestCase
         $this->setExclude([]);
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

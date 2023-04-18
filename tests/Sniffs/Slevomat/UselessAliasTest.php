@@ -14,7 +14,7 @@ final class UselessAliasTest extends SniffTestCase
         $this->appendExclude('Squiz.Classes.ClassFileName.NoMatch');
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

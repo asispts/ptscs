@@ -18,7 +18,7 @@ final class ArraysTest extends SniffTestCase
         ];
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

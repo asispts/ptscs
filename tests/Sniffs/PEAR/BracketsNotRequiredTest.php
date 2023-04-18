@@ -8,7 +8,7 @@ use Ptscs\Tests\Utils\ErrorData;
 
 final class BracketsNotRequiredTest extends SniffTestCase
 {
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[[new ErrorData(3, 'PEAR.Files.IncludingFile.BracketsNotRequired')]];
     }

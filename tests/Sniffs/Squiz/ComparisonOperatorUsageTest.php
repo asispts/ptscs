@@ -7,7 +7,7 @@ use Ptscs\Tests\SniffTestCase;
 
 final class ComparisonOperatorUsageTest extends SniffTestCase
 {
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
       // Allow ! operator
         yield[];

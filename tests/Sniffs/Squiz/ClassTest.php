@@ -13,7 +13,7 @@ final class ClassTest extends SniffTestCase
         $this->setExclude(['Squiz.Classes.ClassFileName']);
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

@@ -14,7 +14,7 @@ final class UseFromSameNamespaceTest extends SniffTestCase
         $this->appendExclude('Squiz.Classes.ClassFileName.NoMatch');
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

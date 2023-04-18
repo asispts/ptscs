@@ -22,7 +22,7 @@ abstract class SniffTestCase extends TestCase
      */
     protected $standard = 'ptscs';
 
-    abstract public function provideTestData(): Iterator;
+    abstract public static function provideTestData(): Iterator;
 
     protected function setExclude(array $values): void
     {

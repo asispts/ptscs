@@ -14,7 +14,7 @@ final class EmptyContentTest extends SniffTestCase
         $this->setExclude([]);
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

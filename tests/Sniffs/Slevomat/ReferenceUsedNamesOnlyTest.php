@@ -17,7 +17,7 @@ final class ReferenceUsedNamesOnlyTest extends SniffTestCase
         ]);
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

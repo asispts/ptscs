@@ -8,7 +8,7 @@ use Ptscs\Tests\Utils\ErrorData;
 
 final class LongArrayTest extends SniffTestCase
 {
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield [
           [new ErrorData(3, 'Generic.Arrays.DisallowLongArraySyntax.Found')],
