@@ -4,10 +4,25 @@ namespace Ptscs\Tests\Utils;
 
 final class ErrorData
 {
-    public function __construct(
-        public readonly int $line,
-        public readonly string $rule,
-        public readonly ?string $message = null,
-    ) {
+    /**
+     * @var int
+     */
+    public $line;
+
+    /**
+     * @var string
+     */
+    public $rule;
+
+    /**
+     * @var string|null
+     */
+    public $message = null;
+
+    public function __construct(int $line, string $rule, ?string $message = null)
+    {
+        $this->line    = $line;
+        $this->rule    = $rule;
+        $this->message = $message;
     }
 }
