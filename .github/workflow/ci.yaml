@@ -1,0 +1,49 @@
+name: Build
+on:
+    push:
+        branches:
+            - "main"
+    pull_request:
+
+jobs:
+    test:
+        strategy:
+            fail-fast: false
+            matrix:
+                operating-system: [ubuntu-latest]
+                php-versions: ["7.2", "7.3", "7.4", "8.0", "8.1", "8.2"]
+
+        runs-on: ${{ matrix.operating-system }}
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Setup PHP, with composer and extensions
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php-versions }}
+                  coverage: none
+
+            - name: Get Composer Cache Directory
+              id: composer-cache-dir
+              run: |
+                  echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+            - name: Cache Composer packages
+              id: composer-cache
+              uses: actions/cache@v3
+              with:
+                  path: ${{ steps.composer-cache-dir.outputs.dir }}
+                  key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
+                  restore-keys: ${{ runner.os }}-composer-
+
+            - name: Install dependencies
+              run: composer install --no-progress
+
+            - name: Install phpunit
+              run: composer req --dev phpunit/phpunit
+
+            - name: Show phpunit version
+              run: vendor/bin/phpunit --version
+
+            - name: Run testing
+              run: vendor/bin/phpunit
