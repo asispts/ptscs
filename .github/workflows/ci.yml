@@ -41,6 +41,9 @@ jobs:
             - name: Check coding style
               run: vendor/bin/phpcs
 
+            - name: Show PHPStan version
+              run: vendor/bin/phpstan --version
+
             - name: Run static analyser
               run: vendor/bin/phpstan analyse
 
