@@ -8,7 +8,7 @@ use Ptscs\Tests\Utils\ErrorData;
 
 final class StringsTest extends SniffTestCase
 {
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

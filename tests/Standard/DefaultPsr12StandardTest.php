@@ -40,7 +40,7 @@ final class DefaultPsr12StandardTest extends TestCase
         $sniff->assertFixed($this, $fixedfile);
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield 'ScopeIndent data' => [
           'ScopeIndent',

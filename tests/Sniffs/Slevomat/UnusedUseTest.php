@@ -14,7 +14,7 @@ final class UnusedUseTest extends SniffTestCase
         $this->setExclude(['Squiz.Classes.ClassFileName.NoMatch']);
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

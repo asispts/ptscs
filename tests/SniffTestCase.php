@@ -9,14 +9,20 @@ use Ptscs\Tests\Utils\SniffAssertion;
 
 abstract class SniffTestCase extends TestCase
 {
-    private array $excludes = [
+    /**
+     * @var string[]
+     */
+    private $excludes = [
       'SlevomatCodingStandard.TypeHints.DeclareStrictTypes',
       'SlevomatCodingStandard.Variables.UnusedVariable',
     ];
 
-    protected string $standard = 'ptscs';
+    /**
+     * @var string
+     */
+    protected $standard = 'ptscs';
 
-    abstract public function provideTestData(): Iterator;
+    abstract public static function provideTestData(): Iterator;
 
     protected function setExclude(array $values): void
     {
@@ -38,12 +44,7 @@ abstract class SniffTestCase extends TestCase
     {
         $names    = \explode('\\', static::class);
         $filename = \str_replace('Test', '', \array_pop($names));
-        $paths    = [
-          __DIR__,
-          ...\array_slice($names, 2),
-          '_data',
-          $filename . '.php.inc',
-        ];
+        $paths    = \array_merge([__DIR__], \array_slice($names, 2), ['_data'], [$filename . '.php.inc']);
 
         $filepath = \implode(DIRECTORY_SEPARATOR, $paths);
         $this->assertFileExists($filepath);

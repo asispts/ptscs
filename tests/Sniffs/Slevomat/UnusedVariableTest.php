@@ -14,7 +14,7 @@ final class UnusedVariableTest extends SniffTestCase
         $this->setExclude(['SlevomatCodingStandard.TypeHints.DeclareStrictTypes']);
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

@@ -26,7 +26,7 @@ final class StandardTest extends TestCase
         $sniff->assertWarning($this, []);
     }
 
-    public function provideFileOnly(): Iterator
+    public static function provideFileOnly(): Iterator
     {
         $dir = __DIR__ . '/_data';
 
@@ -45,7 +45,7 @@ final class StandardTest extends TestCase
         $sniff->assertFixed($this, $fixedfile);
     }
 
-    public function psr12FixedFiles(): Iterator
+    public static function psr12FixedFiles(): Iterator
     {
         $dir = __DIR__ . '/_data';
 

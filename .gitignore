@@ -1,3 +1,5 @@
 /vendor/
+/.phive/
 /tools/
 .phpunit.result.cache
+composer.lock

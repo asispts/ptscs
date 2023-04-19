@@ -14,7 +14,7 @@ final class RequireAbstractOrFinalTest extends SniffTestCase
         $this->setExclude(['Squiz.Classes.ClassFileName.NoMatch', 'PSR1.Classes.ClassDeclaration.MultipleClasses']);
     }
 
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield[
           [

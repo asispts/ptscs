@@ -7,7 +7,7 @@ use Ptscs\Tests\SniffTestCase;
 
 final class OpenTagTest extends SniffTestCase
 {
-    public function provideTestData(): Iterator
+    public static function provideTestData(): Iterator
     {
         yield [];
     }
