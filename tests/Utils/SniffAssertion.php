@@ -9,8 +9,14 @@ use PHPUnit\Framework\Assert;
 
 final class SniffAssertion
 {
+    /**
+     * @var LocalFile
+     */
     private $phpcs;
 
+    /**
+     * @param string[] $excludes
+     */
     public function __construct(string $incfile, string $standard, array $excludes)
     {
         $config            = new Config();
@@ -22,11 +28,17 @@ final class SniffAssertion
         $this->phpcs->process();
     }
 
+    /**
+     * @param ErrorData[] $data
+     */
     public function assertError(Assert $I, array $data): void
     {
         $this->check($I, $data, $this->phpcs->getErrors(), 'Error');
     }
 
+    /**
+     * @param ErrorData[] $data
+     */
     public function assertWarning(Assert $I, array $data): void
     {
         $this->check($I, $data, $this->phpcs->getWarnings(), 'Warning');
@@ -44,6 +56,7 @@ final class SniffAssertion
 
     /**
      * @param ErrorData[] $expected
+     * @param array<string,string>[][][] $actual
      */
     private function check(Assert $I, array $expected, array $actual, string $info): void
     {
@@ -56,6 +69,9 @@ final class SniffAssertion
         }
     }
 
+    /**
+     * @param array<string,string>[][] $lines
+     */
     private function checkItem(Assert $I, ErrorData $error, array $lines): void
     {
         $rules = [];
@@ -76,6 +92,9 @@ final class SniffAssertion
         ));
     }
 
+    /**
+     * @param array<string,string> $item
+     */
     private function checkSource(Assert $I, ErrorData $error, array $item): bool
     {
         if (empty($error->rule) === true) {

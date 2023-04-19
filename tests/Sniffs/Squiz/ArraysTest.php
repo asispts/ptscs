@@ -12,10 +12,8 @@ final class ArraysTest extends SniffTestCase
     {
         parent::setUp();
 
-        $this->excludes = [
-          'Generic.PHP.RequireStrictTypes',
-          'PSR1.Files.SideEffects.FoundWithSymbols',
-        ];
+        $this->appendExclude('Generic.PHP.RequireStrictTypes');
+        $this->appendExclude('PSR1.Files.SideEffects.FoundWithSymbols');
     }
 
     public static function provideTestData(): Iterator

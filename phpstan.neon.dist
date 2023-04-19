@@ -1,0 +1,13 @@
+includes:
+    - vendor/phpstan/phpstan-phpunit/extension.neon
+
+parameters:
+    level: max
+    paths:
+        - tests
+
+    bootstrapFiles:
+        - tests/bootstrap.php
+
+    # Miscellaneous parameters
+    inferPrivatePropertyTypeFromConstructor: true
