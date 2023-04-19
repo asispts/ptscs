@@ -9,6 +9,9 @@ use Ptscs\Tests\Utils\SniffAssertion;
 
 final class DefaultPsr12StandardTest extends TestCase
 {
+    /**
+     * @var string[]
+     */
     private $excludes = [
       'PSR1.Classes.ClassDeclaration.MissingNamespace',
       'PSR1.Files.SideEffects.FoundWithSymbols',
@@ -28,6 +31,9 @@ final class DefaultPsr12StandardTest extends TestCase
 
     /**
      * @dataProvider provideTestData
+     *
+     * @param ErrorData[] $errorData
+     * @param ErrorData[] $warningData
      */
     public function test_sniff(string $filename, array $errorData = [], array $warningData = []): void
     {

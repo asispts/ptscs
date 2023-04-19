@@ -6,5 +6,8 @@ parameters:
     paths:
         - tests
 
+    bootstrapFiles:
+        - tests/bootstrap.php
+
     # Miscellaneous parameters
     inferPrivatePropertyTypeFromConstructor: true

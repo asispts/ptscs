@@ -8,6 +8,9 @@ use Ptscs\Tests\Utils\SniffAssertion;
 
 final class StandardTest extends TestCase
 {
+    /**
+     * @var string[]
+     */
     private $excludes = [
       'PSR1.Classes.ClassDeclaration.MissingNamespace',
       'PSR1.Files.SideEffects.FoundWithSymbols',

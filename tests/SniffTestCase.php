@@ -24,6 +24,9 @@ abstract class SniffTestCase extends TestCase
 
     abstract public static function provideTestData(): Iterator;
 
+    /**
+     * @param string[] $values
+     */
     protected function setExclude(array $values): void
     {
         $this->excludes = $values;
