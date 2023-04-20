@@ -1,19 +1,21 @@
+[![Build](https://github.com/asispts/ptscs/actions/workflows/ci.yml/badge.svg)](https://github.com/asispts/ptscs/actions/workflows/ci.yml)
 [![](https://img.shields.io/github/license/asispts/ptscs)](./LICENSE)
 [![](https://img.shields.io/packagist/php-v/asispts/ptscs/dev-main)](https://github.com/asispts/ptscs)
 [![](https://img.shields.io/packagist/dt/asispts/ptscs)](https://packagist.org/packages/asispts/ptscs)
 
 
-# `ptscs`
-> PSR-12 coding standard with some additional strict rules
+# `ptscs` (PTS Coding Standard)
+
+`ptscs` is a coding standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) that follows the PSR-12 with additional strict rules. It is intended to help developers maintain consistency and readability in their codebase, and to encourage best practices.
 
 ## Installation
-Install with composer
+You can install with composer
 ```
 composer require --dev asispts/ptscs
 ```
 
 ## Usage
-Create `phpcs.xml.dist`
+Once installed, you can create a `phpcs.xml.dist` file to define your PHPCS configuration and then configure your text editor or workflow to lint or fix the codebase based on this configuration. Here is an example phpcs.xml.dist file:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -32,234 +34,48 @@ Create `phpcs.xml.dist`
   <rule ref="ptscs"/>
 </ruleset>
 ```
-Run `phpcs` to validate your source code or `phpcbf` to fix the violations.
+You can use `phpcs` to validate your source code against this standard or `phpcbf` to automatically fix any violations.
 
-
-## Coding standards
-
-1. Excluded from PSR-12 \
-Allow php tag and strict types in the same line.
-```php
-<?php declare(strict_types=1);
+To run `phpcs`, execute the following command:
+```
+vendor/bin/phpcs
+```
+To automatically fix any coding standard violations, execute the following command:
+```
+vendor/bin/phpcbf
 ```
 
-2. Require `declare(strict_types=1)` in all PHP files
-3. Allow `snake_case` in test methods
+## Notable coding standard
+As mentioned, this coding standard use PSR-12 with some exceptions and additional strict rules. Here are some notable additional strict rules.
+
+1. We exclude some PSR-12 rules to allow `declare(strict_types=1)` on the same line as PHP open tag.
+```php
+<?php declare(strict_types=1)
+```
+2.  `declare(strict_types=1)` is required in all PHP files.
+3. `snake_case` is allowed in test method names
 ```php
 public function test_something(): void
 {
 }
 ```
-4. Detect commented-out code.
+4. All classes should be declared as either `final` or `abstract`
 ```php
-// Will warn about the next line
-// require_once $file;
-```
-5. Ban some built-in functions:
-  - `sizeof`, use `count`
-  - `print`, use `echo`
-  - `each`, use `foreach`
-  - `is_null`, use `=== null`
-  - `create_function`
-  - `var_dump`
-  - `print_r`
-  - `debug_print_backtrace`
-  - `eval`
-  - `extract`
-6. Brackets are not required when including a file.
-```php
-// will warn you about this
-require_once($file);
-
-// brackets are not required
-require_once $file;
-```
-7. Align multiple statements
-```php
-$var         = 'value';
-$longVarName = 'value';
-```
-8. Implicit boolean in comparison operator is prohibited.
-```php
-// prohibited
-if ($value1 || !$value2){
-}
-
-// allowed
-if ($value1 === true || $value2 === false){
-}
-```
-9. Array bracket spacing
-```php
-$array      ['key'] = 'value';
-$array[     'key'] = 'value';
-$array['key'       ] = 'value';
-
-// Will be formatted to
-$array['key'] = 'value';
-$array['key'] = 'value';
-$array['key'] = 'value';
-```
-10. Multiline array indentation
-```php
-function check(): void
-{
-                return $myArray ===          [
-                    'key1'      =>          'value',
-                                'key-long-long-long'          =>  'value',
-'key-medium'      =>      'value'
-                    ];
-}
-
-// Will be formatted to
-function check(): void
-{
-    return $myArray === [
-      'key1'               => 'value',
-      'key-long-long-long' => 'value',
-      'key-medium'         => 'value',
-    ];
-}
-```
-11. Semi-colon spacing
-```php
-$var = 'value'      ;
-
-// will be formatted to
-$var = 'value';
-```
-12. Language construct spacing
-```php
-// For example
-require$blah;
-require_once        'test';
-$a = new        stdClass();
-
-// will be formatted to
-require $blah;
-require_once 'test';
-$a = new stdClass();
-```
-13. Logical operator spacing
-```php
-$a = $b             && $c;
-$a = $b &&              $c;
-
-// will be formatted to
-$a = $b && $c;
-$a = $b && $c;
-```
-14. Object operator spacing
-```php
-$this   ->testThis();
-$this->     testThis();
-
-parent      ::testThis();
-parent::    testThis();
-
-// will be formatted to
-$this->testThis();
-$this->testThis();
-
-parent::testThis();
-parent::testThis();
-```
-15. Cast spacing
-```php
-(int)$var;
-(int)       $var;
-
-// will be formatted to
-(int) $var;
-(int) $var;
-```
-
-16. String concatenation spacing
-```php
-$var = 'Hello' .     ' World';
-$var = 'Hello'      . ' World';
-$var = 'Hello'      .
-' World';
-
-// will be formatted to
-$var = 'Hello' . ' World';
-$var = 'Hello' . ' World';
-$var = 'Hello' . ' World';
-```
-
-17. Echoed strings should not be bracketed
-```php
-echo('Should not be bracketed');
-
-// will be formatted to
-echo 'Should not be bracketed';
-```
-
-18. Double quote is used in escaped string only
-```php
-echo "Double quote is not required here";
-
-// will be formatted to
-echo 'Double quote is not required here';
-```
-
-19. Remove space before and after function body
-```php
-function fn()
-{
-
-  $var = 1;
-
-}
-
-// will be formatted to
-function fn()
-{
-  $var = 1;
-}
-```
-20. Spacing between functions
-```php
-function fn1()
-{
-}
-
-function fn2()
+// Prohibited.
+// Should be declared as either final or abstract
+class foobar
 {
 }
 ```
-21. Class member spacing
-```php
-class Foo
-{
-    private $foo;
+5. Filenames must match the class names.
 
-    private $bar;
-}
-```
-22. Support fluent interface
-```php
-$obj->add('value 1')
-    ->add('value 2')
-    ->add('value 3');
-```
-23. Ensure filename have to match the class name
-24. Forbid final methods in final classes
-25. Disallow long array syntax
-```php
-$arr = array(); // not allowedgit a
-```
-26. All classes should be a `final` or `abstract`
-27. Remove unused `use`
-28. Fully qualified global functions
-29. Disallow group `use`
-30. Disallow multiple `use` per line
-31. Disallow `use` from same namespace
-32. Detect useless alias
-33. Reference used name only (`SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly`)
-34. Detect useless variable declaration
-35. Detect unused variables
+The complete set of rules can be seen in [RULES.md](./RULES.md) file. These rules are intended to promote cleaner, more readable, and more maintainable code.
+
+
+## Contributing
+We welcome contributions from the community in all forms. You can report issues, suggest improvements or submit pull requests.
+
+For major changes, it is highly recommended to open an issue first to discuss the proposed changes with the project maintainers.
 
 ## License
-Released under [MIT License](https://opensource.org/licenses/MIT).
-See [LICENSE](./LICENSE) file.
+Released under [MIT License](./LICENSE).
