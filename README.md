@@ -45,6 +45,16 @@ To automatically fix any coding standard violations, execute the following comma
 vendor/bin/phpcbf
 ```
 
+### Excluding Some Rules
+You can exclude some rules by modifying the `phpcs.xml.dist` file. For example, if you want to exclude the rule that requires classes to be declared as either `final` or `abstract` in the `src/Entity` directory of a Symfony project, you can add the following to your `phpcs.xml.dist` file:
+```xml
+<rule ref="SlevomatCodingStandard.Classes.RequireAbstractOrFinal">
+    <exclude-pattern>src/Entity</exclude-pattern>
+</rule>
+```
+
+This will exclude the `RequireAbstractOrFinal` rule for the `src/Entity` directory. You can customize the rule and the directory as per your needs. By excluding some rules, you can customize the coding standard to better suit your project's requirements.
+
 ## Notable coding standard
 As mentioned, this coding standard use PSR-12 with some exceptions and additional strict rules. Here are some notable additional strict rules.
 
