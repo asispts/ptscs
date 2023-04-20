@@ -186,6 +186,7 @@
     <rule ref="SlevomatCodingStandard.Variables.UselessVariable" />
     <rule ref="SlevomatCodingStandard.Variables.UnusedVariable" />
     <rule ref="SlevomatCodingStandard.Functions.UnusedParameter" />
+    <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure" />
 
 
     <!--++++++++++++++++++++++++++++++++++++
