@@ -228,3 +228,4 @@ $arr = array(); // not allowedgit a
 34. Detect unused variables
 35. Detect unused function parameters
 36. Detect unused inherited variables passed to a closure
+37. Disallow one-line property doc comment

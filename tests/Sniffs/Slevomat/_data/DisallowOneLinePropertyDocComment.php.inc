@@ -1,0 +1,15 @@
+<?php declare(strict_types=1);
+
+namespace App;
+
+final class Foobar
+{
+    /** @var string */
+    public $name;
+
+    public function __invoke()
+    {
+        /** @var string */
+        $foobar = 'Should not format this doc comment';
+    }
+}
