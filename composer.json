@@ -29,6 +29,11 @@
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
     },
+    "autoload": {
+        "psr-4": {
+            "Ptscs\\": "ptscs"
+        }
+    },
     "autoload-dev": {
         "psr-4": {
             "Ptscs\\Tests\\": "tests"

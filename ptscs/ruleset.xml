@@ -11,9 +11,13 @@
     <rule ref="PSR12">
         <!-- Allow <?php declare(strict_types=1); in the same line -->
         <exclude name="PSR12.Files.OpenTag.NotAlone" />
-        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock" />
+        <exclude name="PSR12.Files.FileHeader" />
         <!-- There is a bug when dealing with readonly class. See squizlabs/PHP_CodeSniffer#3727 -->
         <exclude name="PSR1.Files.SideEffects.FoundWithSymbols" />
+    </rule>
+
+    <rule ref="Ptscs.PSR12.FileHeader">
+        <exclude name="Ptscs.PSR12.FileHeader.SpacingAfterBlock" />
     </rule>
 
     <!--++++++++++++++++++++++++++++++++++++
