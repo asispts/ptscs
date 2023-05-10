@@ -7,8 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+  - Disallow one-line property doc comment rule (#7)
+
 ### Fixed
-  - Fix PSR12 FileHeader incorrect order
+  - Fix PSR12 FileHeader incorrect order (#6)
 
 ## [1.0] - 2023-04-21
 Initial release

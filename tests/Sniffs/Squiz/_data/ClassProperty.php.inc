@@ -10,7 +10,7 @@ class Class1
 }
 class Class2
 {
-    /** @doc */
+    /** doc comment */
 
 
     private $var1;
@@ -24,7 +24,7 @@ class Class3
 }
 class Class4
 {
-    /** docs */
+    /** doc comment */
 
 
     #[attribute]
@@ -37,7 +37,7 @@ class Class5
     #[attribute]
 
 
-    /** docs */
+    /** doc comment */
 
 
     private $var1;
