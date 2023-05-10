@@ -7,15 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [1.1.0] - 2023-05-10
 ### Added
-  - Disallow one-line property doc comment rule (#7)
+  - Disallow one-line property doc comment rule
 
 ### Fixed
-  - Fix PSR12 FileHeader incorrect order (#6)
+  - Fix PSR12 FileHeader incorrect order
+
 
 ## [1.0] - 2023-04-21
 Initial release
 
 
-[Unreleased]: https://github.com/asispts/ptscs/compare/v1.0...master
+[Unreleased]: https://github.com/asispts/ptscs/compare/v1.1.0...master
+[1.1.0]: https://github.com/asispts/ptscs/releases/tag/v1.1.0
 [1.0]: https://github.com/asispts/ptscs/releases/tag/v1.0
