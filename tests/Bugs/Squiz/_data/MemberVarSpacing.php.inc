@@ -1,0 +1,29 @@
+<?php
+
+final class MemberVar
+{
+    // phpcs can fix this but not the next one
+
+    #[SingleAttribute]
+
+
+    public $property1;
+    #[SingleAttribute]
+
+
+
+
+    public $property2;
+
+
+
+
+
+    #[SingleAttribute]
+
+
+
+
+
+    public $property3;
+}
