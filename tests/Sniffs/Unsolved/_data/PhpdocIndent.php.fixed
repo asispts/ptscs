@@ -3,4 +3,4 @@
     /**
      * @var int
      */
-var $value = 1;
+$value = 1;
