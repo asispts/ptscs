@@ -1,10 +1,25 @@
-[![Build](https://github.com/asispts/ptscs/actions/workflows/ci.yml/badge.svg)](https://github.com/asispts/ptscs/actions/workflows/ci.yml)
-[![](https://img.shields.io/github/license/asispts/ptscs)](./LICENSE)
-[![](https://img.shields.io/packagist/php-v/asispts/ptscs/dev-main)](https://github.com/asispts/ptscs)
-[![](https://img.shields.io/packagist/dt/asispts/ptscs)](https://packagist.org/packages/asispts/ptscs)
+<div align="center">
+  <samp>
+    <h1>ptscs</h1>
+    <h3>&raquo; PSR-12 coding standard with additional strict rules  &laquo;</h3>
+  </samp>
+
+  [![Build](https://github.com/asispts/ptscs/actions/workflows/ci.yml/badge.svg)](https://github.com/asispts/ptscs/actions/workflows/ci.yml)
+  [![](https://img.shields.io/github/license/asispts/ptscs)](./LICENSE)
+  [![](https://img.shields.io/packagist/php-v/asispts/ptscs/dev-main)](https://github.com/asispts/ptscs)
+  [![](https://img.shields.io/packagist/dt/asispts/ptscs)](https://packagist.org/packages/asispts/ptscs)
 
 
-# `ptscs` (PTS Coding Standard)
+  [Installation](#installation) &#10022;
+  [Usage](#usage) &#10022;
+  [Notable coding standard](#notable-coding-standard) &#10022;
+  [Contributing](#contributing) &#10022;
+  [License](#license)
+
+  &nbsp;
+</div>
+
+
 
 `ptscs` is a coding standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) that follows the PSR-12 with additional strict rules. It is intended to help developers maintain consistency and readability in their codebase, and to encourage best practices.
 
