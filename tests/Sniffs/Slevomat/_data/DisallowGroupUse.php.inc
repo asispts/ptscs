@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Entity\{User,Role};
+use App\Entity\{ User, Role as EntityRole};
 
 final class Foobar
 {
@@ -12,7 +12,7 @@ final class Foobar
     private $user;
 
     /**
-     * @var Role
+     * @var EntityRole
      */
     private $role;
 }

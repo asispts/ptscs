@@ -49,8 +49,8 @@ abstract class SniffTestCase extends TestCase
         $filename = \str_replace('Test', '', \array_pop($names));
         $paths    = \array_merge([__DIR__], \array_slice($names, 2), ['_data'], [$filename . '.php.inc']);
 
-        $filepath = \implode(DIRECTORY_SEPARATOR, $paths);
-        $this->assertFileExists($filepath);
+        $filepath = \implode(\DIRECTORY_SEPARATOR, $paths);
+        $this->assertFileExists($filepath, "File $filepath is not exists");
 
         $sniff = new SniffAssertion($filepath, $this->standard, $this->excludes);
         $sniff->assertError($this, $errorData);
