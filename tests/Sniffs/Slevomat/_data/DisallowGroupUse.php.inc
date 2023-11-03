@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Entity\{ User, Role as EntityRole};
+use App\Entity\{User, Role as EntityRole};
 
 final class Foobar
 {
