@@ -179,11 +179,13 @@
     <rule ref="SlevomatCodingStandard.Namespaces.UselessAlias" />
 
     <!-- Fully qualified exceptions and global functions -->
+    <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalConstants" />
     <rule ref="SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions" />
     <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
         <properties>
             <property name="searchAnnotations" value="true" />
             <property name="allowFullyQualifiedGlobalFunctions" value="true" />
+            <property name="allowFullyQualifiedGlobalConstants" value="true" />
         </properties>
     </rule>
 

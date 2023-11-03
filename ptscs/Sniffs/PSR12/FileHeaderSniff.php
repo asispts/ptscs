@@ -23,7 +23,7 @@ final class FileHeaderSniff implements Sniff
      */
     public function register()
     {
-        return [T_OPEN_TAG];
+        return [\T_OPEN_TAG];
     }
 
     /**
@@ -41,8 +41,8 @@ final class FileHeaderSniff implements Sniff
 
         $possibleHeaders = [];
 
-        $searchFor             = Tokens::$ooScopeTokens;
-        $searchFor[T_OPEN_TAG] = T_OPEN_TAG;
+        $searchFor              = Tokens::$ooScopeTokens;
+        $searchFor[\T_OPEN_TAG] = \T_OPEN_TAG;
 
         $openTag = $stackPtr;
         do {
@@ -95,7 +95,7 @@ final class FileHeaderSniff implements Sniff
             if ($openTag !== 0) {
                 // Allow for hashbang lines.
                 $hashbang = false;
-                if ($tokens[($openTag - 1)]['code'] === T_INLINE_HTML) {
+                if ($tokens[($openTag - 1)]['code'] === \T_INLINE_HTML) {
                     $content = \trim($tokens[($openTag - 1)]['content']);
                     if (\substr($content, 0, 2) === '#!') {
                         $hashbang = true;
@@ -127,7 +127,7 @@ final class FileHeaderSniff implements Sniff
     {
         $tokens = $phpcsFile->getTokens();
 
-        $next = $phpcsFile->findNext(T_WHITESPACE, ($stackPtr + 1), null, true);
+        $next = $phpcsFile->findNext(\T_WHITESPACE, ($stackPtr + 1), null, true);
         if ($next === false) {
             return [];
         }
@@ -142,19 +142,19 @@ final class FileHeaderSniff implements Sniff
         $foundDocblock = false;
 
         $commentOpeners = Tokens::$scopeOpeners;
-        unset($commentOpeners[T_NAMESPACE]);
-        unset($commentOpeners[T_DECLARE]);
-        unset($commentOpeners[T_USE]);
-        unset($commentOpeners[T_IF]);
-        unset($commentOpeners[T_WHILE]);
-        unset($commentOpeners[T_FOR]);
-        unset($commentOpeners[T_FOREACH]);
-        unset($commentOpeners[T_DO]);
-        unset($commentOpeners[T_TRY]);
+        unset($commentOpeners[\T_NAMESPACE]);
+        unset($commentOpeners[\T_DECLARE]);
+        unset($commentOpeners[\T_USE]);
+        unset($commentOpeners[\T_IF]);
+        unset($commentOpeners[\T_WHILE]);
+        unset($commentOpeners[\T_FOR]);
+        unset($commentOpeners[\T_FOREACH]);
+        unset($commentOpeners[\T_DO]);
+        unset($commentOpeners[\T_TRY]);
 
         do {
             switch ($tokens[$next]['code']) {
-                case T_DOC_COMMENT_OPEN_TAG:
+                case \T_DOC_COMMENT_OPEN_TAG:
                     if ($foundDocblock === true) {
                     // Found a second docblock, so start of code.
                         break(2);
@@ -168,7 +168,7 @@ final class FileHeaderSniff implements Sniff
                         }
 
                         if (
-                            $tokens[$docToken]['code'] === T_ATTRIBUTE
+                            $tokens[$docToken]['code'] === \T_ATTRIBUTE
                             && isset($tokens[$docToken]['attribute_closer']) === true
                         ) {
                             $docToken = $tokens[$docToken]['attribute_closer'];
@@ -190,7 +190,7 @@ final class FileHeaderSniff implements Sniff
                         $annotation = false;
                         for ($i = $next; $i < $end; $i++) {
                             if (
-                                $tokens[$i]['code'] === T_DOC_COMMENT_TAG
+                                $tokens[$i]['code'] === \T_DOC_COMMENT_TAG
                                 && \strtolower($tokens[$i]['content']) === '@var'
                             ) {
                                 $annotation = true;
@@ -210,8 +210,8 @@ final class FileHeaderSniff implements Sniff
 
                     $next = $end;
                     break;
-                case T_DECLARE:
-                case T_NAMESPACE:
+                case \T_DECLARE:
+                case \T_NAMESPACE:
                     if (isset($tokens[$next]['scope_opener']) === true) {
                     // If this statement is using bracketed syntax, it doesn't
                     // apply to the entire files and so is not part of header.
@@ -229,10 +229,10 @@ final class FileHeaderSniff implements Sniff
 
                     $next = $end;
                     break;
-                case T_USE:
+                case \T_USE:
                     $type    = 'use';
                     $useType = $phpcsFile->findNext(Tokens::$emptyTokens, ($next + 1), null, true);
-                    if ($useType !== false && $tokens[$useType]['code'] === T_STRING) {
+                    if ($useType !== false && $tokens[$useType]['code'] === \T_STRING) {
                         $content = \strtolower($tokens[$useType]['content']);
                         if ($content === 'function' || $content === 'const') {
                             $type .= ' ' . $content;
@@ -266,7 +266,7 @@ final class FileHeaderSniff implements Sniff
                     break(2);
             }//end switch
 
-            $next = $phpcsFile->findNext(T_WHITESPACE, ($next + 1), null, true);
+            $next = $phpcsFile->findNext(\T_WHITESPACE, ($next + 1), null, true);
         } while ($next !== false);
 
         return $headerLines;
@@ -295,7 +295,7 @@ final class FileHeaderSniff implements Sniff
                 // We're at the end of the current header block.
                 // Make sure there is a single blank line after
                 // this block.
-                $next = $phpcsFile->findNext(T_WHITESPACE, ($line['end'] + 1), null, true);
+                $next = $phpcsFile->findNext(\T_WHITESPACE, ($line['end'] + 1), null, true);
                 if ($next !== false && $tokens[$next]['line'] !== ($tokens[$line['end']]['line'] + 2)) {
                     $error = 'Header blocks must be separated by a single blank line';
                     $fix   = $phpcsFile->addFixableError($error, $line['end'], 'SpacingAfterBlock');
@@ -335,7 +335,7 @@ final class FileHeaderSniff implements Sniff
             } elseif ($headerLines[($i + 1)]['type'] === $line['type']) {
                 // Still in the same block, so make sure there is no
                 // blank line after this statement.
-                $next = $phpcsFile->findNext(T_WHITESPACE, ($line['end'] + 1), null, true);
+                $next = $phpcsFile->findNext(\T_WHITESPACE, ($line['end'] + 1), null, true);
                 if ($tokens[$next]['line'] > ($tokens[$line['end']]['line'] + 1)) {
                     $error = 'Header blocks must not contain blank lines';
                     $fix   = $phpcsFile->addFixableError($error, $line['end'], 'SpacingInsideBlock');

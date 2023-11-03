@@ -18,7 +18,8 @@ final class FullyQualifiedTest extends SniffTestCase
     {
         yield[
           [
-            new ErrorData(11, 'SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions'),
+            new ErrorData(13, 'SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions'),
+            new ErrorData(15, 'SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions'),
           ],
         ];
     }

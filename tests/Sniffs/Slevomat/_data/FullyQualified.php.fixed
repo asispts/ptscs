@@ -8,6 +8,8 @@ final class FooException extends Exception
 
     public function __construct()
     {
-        $this->values = \explode(DIRECTORY_SEPARATOR, __DIR__);
+        $this->values = \explode(\DIRECTORY_SEPARATOR, __DIR__);
+
+        echo \parse_url('localhost', \PHP_URL_QUERY);
     }
 }
