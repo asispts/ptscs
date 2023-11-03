@@ -14,6 +14,7 @@ final class ClassMethodTest extends SniffTestCase
         $this->appendExclude('Squiz.Classes.ClassFileName');
         $this->appendExclude('Generic.PHP.RequireStrictTypes.MissingDeclaration');
         $this->appendExclude('SlevomatCodingStandard.Classes.RequireAbstractOrFinal');
+        $this->appendExclude('SlevomatCodingStandard.Functions.DisallowEmptyFunction');
     }
 
     public static function provideTestData(): Iterator

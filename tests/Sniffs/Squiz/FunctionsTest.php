@@ -11,6 +11,7 @@ final class FunctionsTest extends SniffTestCase
     protected function setUp(): void
     {
         $this->appendExclude('PSR1.Files.SideEffects.FoundWithSymbols');
+        $this->appendExclude('SlevomatCodingStandard.Functions.DisallowEmptyFunction');
     }
 
     public static function provideTestData(): Iterator
