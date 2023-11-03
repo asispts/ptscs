@@ -6,7 +6,7 @@ final class Foobar
 {
     public function __invoke(): callable
     {
-        return function () use ($name) {
+        return static function () use ($name) {
         };
     }
 }

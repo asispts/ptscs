@@ -4,9 +4,10 @@ namespace App;
 
 final class Foobar
 {
-    public function __invoke(): callable
+    public function callback()
     {
-        return static function () {
+        return function () {
+            return 'Test';
         };
     }
 }

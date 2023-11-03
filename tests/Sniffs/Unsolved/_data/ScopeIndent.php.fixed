@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-$this->callback(function () {
+$this->callback(static function () {
     if (true) {
     }
 
