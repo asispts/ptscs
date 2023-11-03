@@ -8,6 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+## [2.0.0] - 2023-11-03
+### Added
+  - Support fully qualified global constant
+  - Detect and remove useless property, parameter, and return annotations
+  - Detect and remove empty comment
+  - Disallow empty function unless contains a comment
+  - Use a static closure if possible
+
+### Changed
+  - Change the maximum line length to 140 characters.
+  - Increase the percentage of commented-out code to 75%
+
+### Removed
+  - Remove the rule `SlevomatCodingStandard.Functions.UnusedParameter`
+
+
 ## [1.1.0] - 2023-05-10
 ### Added
   - Disallow one-line property doc comment rule
@@ -20,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Initial release
 
 
-[Unreleased]: https://github.com/asispts/ptscs/compare/v1.1.0...master
+[Unreleased]: https://github.com/asispts/ptscs/compare/v2.0.0...master
+[2.0.0]: https://github.com/asispts/ptscs/releases/tag/v2.0.0
 [1.1.0]: https://github.com/asispts/ptscs/releases/tag/v1.1.0
 [1.0]: https://github.com/asispts/ptscs/releases/tag/v1.0
