@@ -197,6 +197,7 @@
     <!-- Useless typehint -->
     <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation" />
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation" />
+    <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation" />
 
 
     <!--++++++++++++++++++++++++++++++++++++
