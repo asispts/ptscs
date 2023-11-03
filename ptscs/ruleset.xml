@@ -202,4 +202,13 @@
     <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier" />
 
 
+    <!--++++++++++++++++++++++++++++++++++++
+    PSR-12
+    ++++++++++++++++++++++++++++++++++++-->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="140" />
+            <property name="absoluteLineLimit" value="0" />
+        </properties>
+    </rule>
 </ruleset>
