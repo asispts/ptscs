@@ -194,6 +194,9 @@
     <rule ref="SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure" />
     <rule ref="SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment" />
 
+    <!-- Useless typehint -->
+    <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint.UselessAnnotation" />
+
 
     <!--++++++++++++++++++++++++++++++++++++
     Code analysis
