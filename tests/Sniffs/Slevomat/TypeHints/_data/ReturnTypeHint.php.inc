@@ -1,0 +1,19 @@
+<?php declare(strict_types=1);
+
+namespace App;
+
+final class Foobar
+{
+    /**
+     * @return string
+     */
+    public function useless(): string
+    {
+        return $this->value;
+    }
+
+    public function missing()
+    {
+        return 'missing';
+    }
+}

@@ -1,0 +1,51 @@
+<?php declare(strict_types=1);
+
+namespace App;
+
+use Symfony\Component\Validator\Constraints as Assert;
+
+final class Foobar
+{
+    /**
+     * @var string
+     */
+    private string $useless;
+
+    /**
+     * @Assert\NotBlank
+     */
+    private $missing;
+
+    /**
+     * Description
+     *
+     */
+    private string $value1;
+
+    private ?int $value2 = null;
+
+    private string|int|float $value3;
+
+    /**
+     * @var string[]
+     */
+    private array $value4;
+
+    /**
+     * @var string The hashed password
+     */
+    private string $password;
+
+    private $inferMissing;
+
+    /**
+     * @var int
+     */
+    private $inferUseless;
+
+    public function __construct(string $inferMissing, int $inferUseless)
+    {
+        $this->inferMissing = $inferMissing;
+        $this->inferUseless = $inferUseless;
+    }
+}
