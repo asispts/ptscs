@@ -13,7 +13,7 @@ final class CommentedOutCodeTest extends SniffTestCase
         yield[
           [], // Error data
           [ // Warning data
-            new ErrorData(4, 'Squiz.PHP.CommentedOutCode', 'This comment is 60% valid code'),
+            new ErrorData(13, 'Squiz.PHP.CommentedOutCode', 'This comment is 75% valid code'),
           ],
         ];
     }
