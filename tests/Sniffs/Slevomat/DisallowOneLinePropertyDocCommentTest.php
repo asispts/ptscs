@@ -18,7 +18,6 @@ final class DisallowOneLinePropertyDocCommentTest extends SniffTestCase
     {
         yield[
           [
-            // phpcs:ignore Generic.Files.LineLength.TooLong
             new ErrorData(7, 'SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment.OneLinePropertyComment'),
           ],
         ];
