@@ -19,7 +19,6 @@ final class Foobar
     }
 
     /**
-     * @return string
      */
     public function getValue(): string
     {

@@ -6,7 +6,7 @@ use Iterator;
 use Ptscs\Tests\SniffTestCase;
 use Ptscs\Tests\Utils\ErrorData;
 
-final class UselessDocblockTest extends SniffTestCase
+final class ReturnTypeHintTest extends SniffTestCase
 {
     protected function setUp(): void
     {
@@ -17,7 +17,7 @@ final class UselessDocblockTest extends SniffTestCase
     public static function provideTestData(): Iterator
     {
         yield [
-          [ new ErrorData(22, 'SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation')],
+          [ new ErrorData(8, 'SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation')],
         ];
     }
 }

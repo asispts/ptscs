@@ -19,9 +19,9 @@ final class FileHeaderSniff implements Sniff
     /**
      * Returns an array of tokens this test wants to listen for.
      *
-     * @return array
+     * @return int[]
      */
-    public function register()
+    public function register(): array
     {
         return [\T_OPEN_TAG];
     }
@@ -33,9 +33,8 @@ final class FileHeaderSniff implements Sniff
      * @param int                         $stackPtr  The position of the current
      *                                               token in the stack.
      *
-     * @return int|null
      */
-    public function process(File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr): ?int
     {
         $tokens = $phpcsFile->getTokens();
 
@@ -49,7 +48,7 @@ final class FileHeaderSniff implements Sniff
             $headerLines = $this->getHeaderLines($phpcsFile, $openTag);
             if (empty($headerLines) === true && $openTag === $stackPtr) {
                 // No content in the file.
-                return;
+                return null;
             }
 
             $possibleHeaders[$openTag] = $headerLines;
@@ -123,7 +122,7 @@ final class FileHeaderSniff implements Sniff
      *
      * @return array
      */
-    public function getHeaderLines(File $phpcsFile, $stackPtr)
+    public function getHeaderLines(File $phpcsFile, $stackPtr): array
     {
         $tokens = $phpcsFile->getTokens();
 
@@ -276,12 +275,9 @@ final class FileHeaderSniff implements Sniff
      * Check the spacing and grouping of the statements inside each header block.
      *
      * @param File $phpcsFile The file being scanned.
-     * @param array                       $headerLines Header information, as sourced
-     *                                                 from getHeaderLines().
-     *
-     * @return int|null
+     * @param array $headerLines Header information, as sourced from getHeaderLines().
      */
-    public function processHeaderLines(File $phpcsFile, $headerLines)
+    public function processHeaderLines(File $phpcsFile, $headerLines): void
     {
         $tokens = $phpcsFile->getTokens();
 
