@@ -9,5 +9,6 @@ final class Foobar
      */
     public function check(string $useless, array $list, $missing): void
     {
+        // empty
     }
 }

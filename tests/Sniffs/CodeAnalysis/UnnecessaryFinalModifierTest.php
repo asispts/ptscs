@@ -15,6 +15,7 @@ final class UnnecessaryFinalModifierTest extends SniffTestCase
           'Squiz.Classes.ClassFileName.NoMatch',
           'PSR1.Classes.ClassDeclaration.MultipleClasses',
           'SlevomatCodingStandard.Classes.RequireAbstractOrFinal',
+          'SlevomatCodingStandard.Functions.DisallowEmptyFunction',
         ]);
     }
 
