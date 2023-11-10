@@ -20,6 +20,8 @@
         <exclude name="Ptscs.PSR12.FileHeader.SpacingAfterBlock" />
     </rule>
 
+    <rule ref="Generic.PHP.BacktickOperator" />
+
     <!--++++++++++++++++++++++++++++++++++++
     Additional rules
     ++++++++++++++++++++++++++++++++++++-->
