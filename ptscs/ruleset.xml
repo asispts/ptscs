@@ -206,6 +206,7 @@
 
     <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators" />
     <rule ref="SlevomatCodingStandard.PHP.UselessParentheses" />
+    <rule ref="SlevomatCodingStandard.PHP.UselessSemicolon" />
 
     <!--++++++++++++++++++++++++++++++++++++
     Code analysis
