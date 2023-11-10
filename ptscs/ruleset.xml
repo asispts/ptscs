@@ -205,6 +205,7 @@
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation" />
 
     <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators" />
+    <rule ref="SlevomatCodingStandard.PHP.UselessParentheses" />
 
     <!--++++++++++++++++++++++++++++++++++++
     Code analysis

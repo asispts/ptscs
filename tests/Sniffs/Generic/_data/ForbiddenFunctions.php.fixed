@@ -1,7 +1,7 @@
 <?php
 
 sizeof([]);
-print($var);
+print $var;
 each([]);
 is_null($var);
 $newfunc = create_function('$a,$b', 'return "ln($a) + ln($b) = " . log($a * $b);');
