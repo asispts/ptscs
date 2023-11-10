@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset name="ptscs">
+
+<!-- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd" -->
+
+<ruleset name="ptscs" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
     <description>PSR-12 based PHP coding standard</description>
 
     <arg name="tab-width" value="4" />
