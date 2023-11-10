@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ruleset>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+
+    <arg name="basepath" value="." />
     <arg name="colors" />
+    <arg name="extensions" value="php" />
     <arg name="parallel" value="8" />
     <arg value="psv" />
-    <arg name="extensions" value="php" />
 
     <file>ptscs</file>
     <file>tests</file>
@@ -11,4 +14,14 @@
     <exclude-pattern>vendor</exclude-pattern>
 
     <rule ref="ptscs/ruleset.xml" />
+
+    <!-- Detect wrong namespace. PHPStan can't handle this -->
+    <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
+        <properties>
+            <property name="rootNamespaces" type="array">
+                <element key="ptscs" value="Ptscs" />
+                <element key="tests" value="Ptscs\Tests" />
+            </property>
+        </properties>
+    </rule>
 </ruleset>
