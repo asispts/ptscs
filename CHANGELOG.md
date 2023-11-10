@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.0] - 2023-11-10
+### Added
+  - Detect and forbid backticks operator
+  - Disallow loose comparison operator
+  - Detect and remove useless parentheses
+  - Detect and remove useless semicolon
+
 
 ## [2.0.0] - 2023-11-03
 ### Added
@@ -36,7 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Initial release
 
 
-[Unreleased]: https://github.com/asispts/ptscs/compare/v2.0.0...master
+[Unreleased]: https://github.com/asispts/ptscs/compare/v2.1.0...master
+[2.1.0]: https://github.com/asispts/ptscs/releases/tag/v2.1.0
 [2.0.0]: https://github.com/asispts/ptscs/releases/tag/v2.0.0
 [1.1.0]: https://github.com/asispts/ptscs/releases/tag/v1.1.0
 [1.0]: https://github.com/asispts/ptscs/releases/tag/v1.0
