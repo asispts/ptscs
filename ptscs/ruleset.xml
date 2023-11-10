@@ -204,6 +204,7 @@
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint.UselessAnnotation" />
     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint.UselessAnnotation" />
 
+    <rule ref="SlevomatCodingStandard.Operators.DisallowEqualOperators" />
 
     <!--++++++++++++++++++++++++++++++++++++
     Code analysis
