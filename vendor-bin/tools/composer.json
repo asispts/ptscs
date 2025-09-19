@@ -3,7 +3,7 @@
     "phpstan/extension-installer": "^1.4",
     "phpstan/phpstan": "^1.12",
     "phpstan/phpstan-phpunit": "^1.4",
-    "phpunit/phpunit": "^8.5"
+    "phpunit/phpunit": "^8.5|^9.5|^10.0|^11.0|^12.0"
   },
   "config": {
     "allow-plugins": {
