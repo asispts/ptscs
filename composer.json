@@ -1,6 +1,6 @@
 {
   "name": "asispts/ptscs",
-  "description": "PSR-12 coding standard with additional strict rules",
+  "description": " PSR-12 coding standard with stricter rules",
   "type": "phpcodesniffer-standard",
   "license": "MIT",
   "authors": [
