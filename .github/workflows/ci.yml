@@ -7,6 +7,10 @@ on:
 
 jobs:
     lint:
+        strategy:
+            matrix:
+                php: [7.2]
+
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
@@ -14,7 +18,7 @@ jobs:
             - name: Setup PHP, with composer and extensions
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: "7.2"
+                  php-version: ${{ matrix.php }}
                   coverage: none
 
             - name: Install dependencies
@@ -30,18 +34,18 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                operating-system: [ubuntu-latest]
-                php-versions: ["7.2", "7.3", "7.4", "8.0", "8.1", "8.2"]
+                os: [ubuntu-latest]
+                php: [7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3, 8.4]
                 mode: [low, high]
 
-        runs-on: ${{ matrix.operating-system }}
+        runs-on: ${{ matrix.os }}
         steps:
             - uses: actions/checkout@v3
 
             - name: Setup PHP, with composer and extensions
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: ${{ matrix.php-versions }}
+                  php-version: ${{ matrix.php }}
                   coverage: none
 
             - name: Install dependencies
