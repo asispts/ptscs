@@ -2,6 +2,7 @@
   "name": "asispts/ptscs",
   "description": " PSR-12 coding standard with stricter rules",
   "type": "phpcodesniffer-standard",
+  "version": "2.1.1",
   "license": "MIT",
   "authors": [
     {

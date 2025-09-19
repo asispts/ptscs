@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.1.1] - 2025-09-19
+### Change
+  - Prevent installing unsupported `php_codesniffer` version
+
+
 ## [2.1.0] - 2023-11-10
 ### Added
   - Detect and forbid backticks operator
