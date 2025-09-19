@@ -51,6 +51,7 @@ jobs:
               run: |
                   [[ "${{ matrix.mode }}" = "low" ]] && composer update --no-progress --prefer-lowest || true
                   [[ "${{ matrix.mode }}" = "high" ]] && composer update --no-progress || true
+                  [[ "${{ matrix.mode }}" = "low" ]] && composer bin tools update --no-progress || true
 
             - name: Run testing
               run: vendor/bin/phpunit
