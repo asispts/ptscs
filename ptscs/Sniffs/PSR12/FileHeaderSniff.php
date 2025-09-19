@@ -117,10 +117,7 @@ final class FileHeaderSniff implements Sniff
      * Gather information about the statements inside a possible file header.
      *
      * @param File $phpcsFile The file being scanned.
-     * @param int                         $stackPtr  The position of the current
-     *                                               token in the stack.
-     *
-     * @return array
+     * @param int $stackPtr The position of the current token in the stack.
      */
     public function getHeaderLines(File $phpcsFile, $stackPtr): array
     {
