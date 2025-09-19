@@ -61,7 +61,7 @@ final class SniffAssertion
     private function check(Assert $I, array $expected, array $actual, string $info): void
     {
         $count = \count($expected);
-        $I->assertSame($count, \count($actual), $info . ' count. Lines: ' . \implode(', ', \array_keys($actual)));
+        $I->assertCount($count, $actual, $info . ' count. Lines: ' . \implode(', ', \array_keys($actual)));
 
         foreach ($expected as $item) {
             $I->assertArrayHasKey($item->line, $actual, 'lines: ' . \implode(', ', \array_keys($actual)));

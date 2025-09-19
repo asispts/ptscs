@@ -1,0 +1,13 @@
+{
+  "require-dev": {
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^1.12",
+    "phpstan/phpstan-phpunit": "^1.4",
+    "phpunit/phpunit": "^8.5"
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  }
+}
