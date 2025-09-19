@@ -1,106 +1,95 @@
 <div align="center">
   <samp>
     <h1>ptscs</h1>
-    <h3>&raquo; PSR-12 coding standard with additional strict rules  &laquo;</h3>
+    <h3>&raquo; PSR-12 coding standard with stricter rules &laquo;</h3>
   </samp>
-
-  [![Build](https://github.com/asispts/ptscs/actions/workflows/ci.yml/badge.svg)](https://github.com/asispts/ptscs/actions/workflows/ci.yml)
-  [![](https://img.shields.io/github/license/asispts/ptscs)](./LICENSE)
-  [![](https://img.shields.io/packagist/php-v/asispts/ptscs/dev-main)](https://github.com/asispts/ptscs)
-  [![](https://img.shields.io/packagist/dt/asispts/ptscs)](https://packagist.org/packages/asispts/ptscs)
-
-
-  [Installation](#installation) &#10022;
-  [Usage](#usage) &#10022;
-  [Notable coding standard](#notable-coding-standard) &#10022;
-  [Contributing](#contributing) &#10022;
-  [License](#license)
-
   &nbsp;
 </div>
 
+[![CI](https://github.com/asispts/ptscs/actions/workflows/ci.yml/badge.svg)](https://github.com/asispts/ptscs/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/asispts/ptscs)](./LICENSE)
+[![PHP Version](https://img.shields.io/packagist/php-v/asispts/ptscs/dev-main)](https://github.com/asispts/ptscs)
+[![Stable Version](https://img.shields.io/packagist/v/asispts/ptscs?label=stable)](https://packagist.org/packages/asispts/ptscs)
+[![Downloads](https://img.shields.io/packagist/dt/asispts/ptscs)](https://packagist.org/packages/asispts/ptscs)
+<p>&nbsp;</p>
 
-
-`ptscs` is a coding standard for [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer) that follows the PSR-12 with additional strict rules. It is intended to help developers maintain consistency and readability in their codebase, and to encourage best practices.
+`ptscs` is a [PHP_CodeSniffer](https://github.com/PHPCSStandards/PHP_CodeSniffer) ruleset based on **PSR-12** with stricter rules for consistency, readability, and best practices.
+<p>&nbsp;</p>
 
 ## Installation
-You can install with composer
-```
+```bash
 composer require --dev asispts/ptscs
 ```
+<p>&nbsp;</p>
+
 
 ## Usage
-Once installed, you can create a `phpcs.xml.dist` file to define your PHPCS configuration and then configure your text editor or workflow to lint or fix the codebase based on this configuration. Here is an example phpcs.xml.dist file:
+
+Create a `phpcs.xml.dist` file in your project root with the following configuration (customize as needed for your project structure):
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="vendor/squizlabs/php_codesniffer/phpcs.xsd">
 
-  <arg name="colors"/>
-  <arg name="parallel" value="8"/>
-  <arg value="psv"/>
-  <arg name="extensions" value="php"/>
+  <arg name="colors" />
+  <arg name="parallel" value="8" />
+  <arg value="psv" />
+  <arg name="extensions" value="php" />
 
   <file>src</file>
   <file>tests</file>
 
   <exclude-pattern>vendor</exclude-pattern>
 
-  <rule ref="ptscs"/>
+  <rule ref="ptscs" />
+
+  <!-- Example: exclude a rule -->
+  <!-- (e.g. disable abstract/final requirement in symfony entities) -->
+  <rule ref="SlevomatCodingStandard.Classes.RequireAbstractOrFinal">
+    <exclude-pattern>src/Entity</exclude-pattern>
+  </rule>
+
+  <!-- Example: add an extra rule -->
+  <!-- (e.g. enforce namespace matches file name; useful where PHPStan falls short) -->
+  <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
+    <properties>
+      <property name="rootNamespaces" type="array">
+        <element key="ptscs" value="Ptscs" />
+        <element key="tests" value="Ptscs\Tests" />
+      </property>
+    </properties>
+  </rule>
 </ruleset>
 ```
-You can use `phpcs` to validate your source code against this standard or `phpcbf` to automatically fix any violations.
+<p>&nbsp;</p>
 
-To run `phpcs`, execute the following command:
-```
-vendor/bin/phpcs
-```
-To automatically fix any coding standard violations, execute the following command:
-```
-vendor/bin/phpcbf
-```
+## Notable Rules
 
-### Excluding Some Rules
-You can exclude some rules by modifying the `phpcs.xml.dist` file. For example, if you want to exclude the rule that requires classes to be declared as either `final` or `abstract` in the `src/Entity` directory of a Symfony project, you can add the following to your `phpcs.xml.dist` file:
-```xml
-<rule ref="SlevomatCodingStandard.Classes.RequireAbstractOrFinal">
-    <exclude-pattern>src/Entity</exclude-pattern>
-</rule>
-```
+This coding standard uses PSR-12 with some changes and stricter requirements:
 
-This will exclude the `RequireAbstractOrFinal` rule for the `src/Entity` directory. You can customize the rule and the directory as per your needs. By excluding some rules, you can customize the coding standard to better suit your project's requirements.
+1. `declare(strict_types=1)` is required in all PHP files and must be on the same line as the opening tag:
+   ```php
+   <?php declare(strict_types=1)
+   ```
+2. `snake_case` is allowed in test method names:
+   ```php
+   public function test_something(): void {}
+   ```
+3. All classes must be declared as `final` or `abstract`:
+   ```php
+   // Not allowed
+   class Foobar {}
+   ```
+4. Filenames must match class names.
 
-## Notable coding standard
-As mentioned, this coding standard use PSR-12 with some exceptions and additional strict rules. Here are some notable additional strict rules.
+See the full list in [RULES.md](./RULES.md).
 
-1. We exclude some PSR-12 rules to allow `declare(strict_types=1)` on the same line as PHP open tag.
-```php
-<?php declare(strict_types=1)
-```
-2.  `declare(strict_types=1)` is required in all PHP files.
-3. `snake_case` is allowed in test method names
-```php
-public function test_something(): void
-{
-}
-```
-4. All classes should be declared as either `final` or `abstract`
-```php
-// Prohibited.
-// Should be declared as either final or abstract
-class foobar
-{
-}
-```
-5. Filenames must match the class names.
-
-The complete set of rules can be seen in [RULES.md](./RULES.md) file. These rules are intended to promote cleaner, more readable, and more maintainable code.
-
+<p>&nbsp;</p>
 
 ## Contributing
-We welcome contributions from the community in all forms. You can report issues, suggest improvements or submit pull requests.
-
-For major changes, it is highly recommended to open an issue first to discuss the proposed changes with the project maintainers.
+Contributions are welcome! Please open an issue to discuss major changes before submitting a pull request.
+<p>&nbsp;</p>
 
 ## License
 Released under [MIT License](./LICENSE).
