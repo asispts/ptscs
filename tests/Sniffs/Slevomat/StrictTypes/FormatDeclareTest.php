@@ -21,7 +21,7 @@ final class FormatDeclareTest extends SniffTestCase
             new ErrorData(5, 'SlevomatCodingStandard.TypeHints.DeclareStrictTypes.IncorrectWhitespaceBeforeDeclare'),
           ],
           [
-            new ErrorData(5, 'Generic.Formatting.MultipleStatementAlignment.IncorrectWarning'),
+            new ErrorData(5, 'Generic.Formatting.MultipleStatementAlignment'),
           ],
         ];
     }
