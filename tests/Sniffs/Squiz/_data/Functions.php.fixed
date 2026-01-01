@@ -31,6 +31,9 @@ function fn4()
 }
 
 /** docs */
+
+
+
 function phpdoc1()
 {
 }
@@ -46,16 +49,22 @@ function phpdoc3()
 }
 
 /** docs */
+
+
 function phpdoc4()
 {
 }
 
 /** docs */
+
+
 function phpdoc5()
 {
 }
 
 #[attribute]
+
+
 function attribute1()
 {
 }
@@ -71,12 +80,16 @@ function attribute3()
 }
 
 #[attribute]
+
+
 function attribute4()
 {
 }
 
 /** docs */
 #[attribute]
+
+
 function attributeDoc1()
 {
 }
@@ -95,34 +108,36 @@ function attributeDoc3()
 
 /** docs */
 #[attribute]
+
+
 function attributeDoc4()
 {
 }
 
 #[attribute]
-
 /** docs */
+
+
 function docAttribute1()
 {
 }
 
 #[attribute]
-
 /** docs */
 function docAttribute2()
 {
 }
 
 #[attribute]
-
 /** docs */
 function docAttribute3()
 {
 }
 
 #[attribute]
-
 /** docs */
+
+
 function docAttribute4()
 {
 }
