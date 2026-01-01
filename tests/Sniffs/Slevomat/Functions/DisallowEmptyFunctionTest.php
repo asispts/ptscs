@@ -16,7 +16,7 @@ final class DisallowEmptyFunctionTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [new ErrorData(3, 'SlevomatCodingStandard.Functions.DisallowEmptyFunction.EmptyFunction')],
         ];
     }

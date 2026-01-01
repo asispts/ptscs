@@ -16,7 +16,7 @@ final class FullyQualifiedTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(13, 'SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions'),
             new ErrorData(15, 'SlevomatCodingStandard.Namespaces.FullyQualifiedGlobalFunctions'),

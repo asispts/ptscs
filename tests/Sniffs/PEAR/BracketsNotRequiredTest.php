@@ -10,6 +10,6 @@ final class BracketsNotRequiredTest extends SniffTestCase
 {
     public static function provideTestData(): Iterator
     {
-        yield[[new ErrorData(3, 'PEAR.Files.IncludingFile.BracketsNotRequired')]];
+        yield [[new ErrorData(3, 'PEAR.Files.IncludingFile.BracketsNotRequired')]];
     }
 }

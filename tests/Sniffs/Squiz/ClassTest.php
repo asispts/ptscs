@@ -15,7 +15,7 @@ final class ClassTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(4, 'SlevomatCodingStandard.TypeHints.DeclareStrictTypes'),
             new ErrorData(5, 'SlevomatCodingStandard.Namespaces.NamespaceSpacing'),

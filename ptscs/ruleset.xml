@@ -115,9 +115,9 @@ xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_C
     ++++++++++++++++++++++++++++++++++++-->
     <rule ref="Squiz.WhiteSpace.OperatorSpacing" />
     <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
-    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing" />
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing" />
     <rule ref="Generic.Formatting.SpaceAfterCast" />
+    <rule ref="Generic.WhiteSpace.LanguageConstructSpacing" />
 
     <!--++++++++++++++++++++++++++++++++++++
     Allow fluent interface

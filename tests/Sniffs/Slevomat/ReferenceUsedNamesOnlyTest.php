@@ -19,7 +19,7 @@ final class ReferenceUsedNamesOnlyTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(7, 'SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly'),
             new ErrorData(10, 'SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly'),

@@ -16,7 +16,7 @@ final class DisallowOneLinePropertyDocCommentTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(7, 'SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment.OneLinePropertyComment'),
           ],

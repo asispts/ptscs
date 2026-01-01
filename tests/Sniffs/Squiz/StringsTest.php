@@ -10,7 +10,7 @@ final class StringsTest extends SniffTestCase
 {
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(4, 'Squiz.Strings.ConcatenationSpacing.PaddingFound'),
             new ErrorData(5, 'Squiz.Strings.ConcatenationSpacing.PaddingFound'),

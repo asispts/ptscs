@@ -16,7 +16,7 @@ final class FunctionsTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(5, 'Squiz.WhiteSpace.FunctionOpeningBraceSpace.SpacingAfter'),
             new ErrorData(14, 'PSR2.Methods.FunctionClosingBrace.SpacingBeforeClose'),

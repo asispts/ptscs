@@ -10,7 +10,7 @@ final class DisallowEqualOperatorsTest extends SniffTestCase
 {
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(5, 'SlevomatCodingStandard.Operators.DisallowEqualOperators.DisallowedEqualOperator'),
           ],

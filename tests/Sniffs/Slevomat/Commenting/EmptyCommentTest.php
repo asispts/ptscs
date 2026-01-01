@@ -16,7 +16,7 @@ final class EmptyCommentTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(7, 'SlevomatCodingStandard.Commenting.EmptyComment.EmptyComment'),
             new ErrorData(11, 'SlevomatCodingStandard.Commenting.EmptyComment.EmptyComment'),

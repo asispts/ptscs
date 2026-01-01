@@ -16,7 +16,7 @@ final class UnusedVariableTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(3, 'SlevomatCodingStandard.Variables.UnusedVariable'),
             new ErrorData(13, 'SlevomatCodingStandard.Variables.UnusedVariable'),

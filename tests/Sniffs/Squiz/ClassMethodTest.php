@@ -19,7 +19,7 @@ final class ClassMethodTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(5, 'PSR12.Classes.OpeningBraceSpace.Found'),
             new ErrorData(8, 'Squiz.WhiteSpace.FunctionSpacing.BeforeFirst'),

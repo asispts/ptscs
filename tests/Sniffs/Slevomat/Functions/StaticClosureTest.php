@@ -16,7 +16,7 @@ final class StaticClosureTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [new ErrorData(9, 'SlevomatCodingStandard.Functions.StaticClosure.ClosureNotStatic')],
         ];
     }

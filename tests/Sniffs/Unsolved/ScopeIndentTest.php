@@ -9,6 +9,6 @@ final class ScopeIndentTest extends SniffTestCase
 {
     public static function provideTestData(): Iterator
     {
-        yield[];
+        yield [];
     }
 }

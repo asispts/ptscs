@@ -10,6 +10,6 @@ final class ComparisonOperatorUsageTest extends SniffTestCase
     public static function provideTestData(): Iterator
     {
       // Allow ! operator
-        yield[];
+        yield [];
     }
 }

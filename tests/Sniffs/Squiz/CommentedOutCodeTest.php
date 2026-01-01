@@ -10,7 +10,7 @@ final class CommentedOutCodeTest extends SniffTestCase
 {
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [], // Error data
           [ // Warning data
             new ErrorData(13, 'Squiz.PHP.CommentedOutCode', 'This comment is 75% valid code'),
