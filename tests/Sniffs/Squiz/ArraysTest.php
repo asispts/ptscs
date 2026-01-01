@@ -18,7 +18,7 @@ final class ArraysTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(4, 'Squiz.Arrays.ArrayBracketSpacing.SpaceBeforeBracket'),
             new ErrorData(6, 'Squiz.Arrays.ArrayBracketSpacing.SpaceAfterBracket'),

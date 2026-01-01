@@ -19,7 +19,7 @@ final class UnusedUseTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(5, 'SlevomatCodingStandard.Namespaces.UnusedUses'),
           ],

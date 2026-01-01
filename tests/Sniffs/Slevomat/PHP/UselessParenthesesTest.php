@@ -10,7 +10,7 @@ final class UselessParenthesesTest extends SniffTestCase
 {
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(3, 'SlevomatCodingStandard.PHP.UselessParentheses.UselessParentheses'),
           ],

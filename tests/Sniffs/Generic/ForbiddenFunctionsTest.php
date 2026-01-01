@@ -31,6 +31,6 @@ final class ForbiddenFunctionsTest extends SniffTestCase
             $errors[] = new ErrorData($line++, self::RULE, $txt . '() is forbidden');
         }
 
-        yield[$errors];
+        yield [$errors];
     }
 }

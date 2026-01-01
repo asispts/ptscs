@@ -21,7 +21,7 @@ final class UnnecessaryFinalModifierTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [],
           [
             new ErrorData(7, 'Generic.CodeAnalysis.UnnecessaryFinalModifier.Found'),

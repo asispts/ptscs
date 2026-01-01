@@ -15,6 +15,6 @@ final class CorrectOrderTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[];
+        yield [];
     }
 }

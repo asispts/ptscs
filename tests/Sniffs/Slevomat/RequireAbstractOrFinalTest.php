@@ -16,7 +16,7 @@ final class RequireAbstractOrFinalTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(5, 'SlevomatCodingStandard.Classes.RequireAbstractOrFinal'),
             new ErrorData(9, 'SlevomatCodingStandard.Classes.RequireAbstractOrFinal'),

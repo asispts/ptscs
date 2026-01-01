@@ -15,7 +15,7 @@ final class MemberVarSpacingTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(6, 'Squiz.WhiteSpace.MemberVarSpacing.AfterComment'),
             new ErrorData(8, 'Squiz.WhiteSpace.MemberVarSpacing.AfterComment'),

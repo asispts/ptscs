@@ -16,7 +16,7 @@ final class EmptyContentTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(1, 'SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing'),
           ],

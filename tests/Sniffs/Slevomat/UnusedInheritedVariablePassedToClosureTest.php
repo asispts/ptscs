@@ -16,7 +16,7 @@ final class UnusedInheritedVariablePassedToClosureTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [
             new ErrorData(9, 'SlevomatCodingStandard.Functions.UnusedInheritedVariablePassedToClosure.UnusedInheritedVariable'), // phpcs:ignore
           ],

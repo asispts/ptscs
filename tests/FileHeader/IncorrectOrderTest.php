@@ -16,7 +16,7 @@ final class IncorrectOrderTest extends SniffTestCase
 
     public static function provideTestData(): Iterator
     {
-        yield[
+        yield [
           [new ErrorData(7, 'Ptscs.PSR12.FileHeader.IncorrectOrder')],
         ];
     }
