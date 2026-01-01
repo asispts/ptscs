@@ -37,31 +37,26 @@ final class ClassMethodTest extends SniffTestCase
 
             new ErrorData(44, 'PSR12.Classes.OpeningBraceSpace.Found'),
 
+            new ErrorData(50, 'Squiz.WhiteSpace.FunctionSpacing.BeforeFirst'),
+
             new ErrorData(58, 'Squiz.WhiteSpace.FunctionSpacing.After'),
             new ErrorData(61, 'Squiz.WhiteSpace.FunctionSpacing.After'),
 
             new ErrorData(74, 'Squiz.WhiteSpace.FunctionSpacing.After'),
             new ErrorData(78, 'Squiz.WhiteSpace.FunctionSpacing.After'),
-            new ErrorData(84, 'Squiz.WhiteSpace.FunctionSpacing.Before'),
             new ErrorData(86, 'Squiz.WhiteSpace.FunctionSpacing.After'),
 
             new ErrorData(99, 'Squiz.WhiteSpace.FunctionSpacing.After'),
             new ErrorData(103, 'Squiz.WhiteSpace.FunctionSpacing.After'),
-            new ErrorData(109, 'Squiz.WhiteSpace.FunctionSpacing.Before'),
             new ErrorData(111, 'Squiz.WhiteSpace.FunctionSpacing.After'),
 
             new ErrorData(125, 'Squiz.WhiteSpace.FunctionSpacing.After'),
             new ErrorData(130, 'Squiz.WhiteSpace.FunctionSpacing.After'),
-            new ErrorData(139, 'Squiz.WhiteSpace.FunctionSpacing.Before'),
             new ErrorData(141, 'Squiz.WhiteSpace.FunctionSpacing.After'),
 
-            new ErrorData(154, 'Squiz.WhiteSpace.FunctionSpacing.Before'),
             new ErrorData(156, 'Squiz.WhiteSpace.FunctionSpacing.After'),
-            new ErrorData(159, 'Squiz.WhiteSpace.FunctionSpacing.Before'),
             new ErrorData(161, 'Squiz.WhiteSpace.FunctionSpacing.After'),
-            new ErrorData(170, 'Squiz.WhiteSpace.FunctionSpacing.Before'),
             new ErrorData(172, 'Squiz.WhiteSpace.FunctionSpacing.After'),
-            new ErrorData(177, 'Squiz.WhiteSpace.FunctionSpacing.Before'),
           ],
         ];
     }

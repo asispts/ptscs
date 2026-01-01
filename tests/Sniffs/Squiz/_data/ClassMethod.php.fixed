@@ -10,6 +10,7 @@ class Class1
 class Class2
 {
     /** @docs */
+
     public function __construct()
     {
     }
@@ -17,6 +18,7 @@ class Class2
 class Class3
 {
     #[attribute]
+
     public function __construct()
     {
     }
@@ -24,7 +26,9 @@ class Class3
 class Class4
 {
     /** @doc */
+
     #[attribute]
+
     public function __construct()
     {
     }
@@ -67,6 +71,7 @@ class Spacing2
 
     /** @doc */
 
+
     public function __clone()
     {
     }
@@ -89,6 +94,7 @@ class Spacing3
     }
 
     #[attribute]
+
 
     public function __clone()
     {
@@ -118,6 +124,7 @@ class Spacing4
 
     #[attribute]
 
+
     public function __clone()
     {
     }
@@ -131,14 +138,12 @@ class Spacing4
 class Spacing5
 {
     #[attribute]
-
     /** @doc */
     public function __construct()
     {
     }
 
     #[attribute]
-
     /** @doc */
     public function __get()
     {
@@ -149,12 +154,12 @@ class Spacing5
 
     /** @doc */
 
+
     public function __clone()
     {
     }
 
     #[attribute]
-
     /** @doc */
     public function __invoke()
     {

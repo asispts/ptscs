@@ -7,17 +7,8 @@ final class MemberVar
     public $property1;
 
     #[SingleAttribute]
-
-
-
-
     public $property2;
 
     #[SingleAttribute]
-
-
-
-
-
     public $property3;
 }

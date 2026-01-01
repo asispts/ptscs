@@ -14,6 +14,7 @@ final class ClassPropertyTest extends SniffTestCase
         $this->appendExclude('Squiz.Classes.ClassFileName');
         $this->appendExclude('Generic.PHP.RequireStrictTypes.MissingDeclaration');
         $this->appendExclude('SlevomatCodingStandard.Classes.RequireAbstractOrFinal');
+        $this->appendExclude('SlevomatCodingStandard.Commenting.DisallowOneLinePropertyDocComment');
     }
 
     public static function provideTestData(): Iterator
@@ -23,9 +24,11 @@ final class ClassPropertyTest extends SniffTestCase
             new ErrorData(4, 'PSR12.Classes.OpeningBraceSpace.Found'),
             new ErrorData(7, 'Squiz.WhiteSpace.MemberVarSpacing.FirstIncorrect'),
             new ErrorData(10, 'PSR2.Classes.ClassDeclaration.CloseBraceAfterBody'),
-            new ErrorData(13, 'Squiz.WhiteSpace.MemberVarSpacing.AfterComment'),
-            new ErrorData(27, 'Squiz.WhiteSpace.MemberVarSpacing.AfterComment'),
-            new ErrorData(40, 'Squiz.WhiteSpace.MemberVarSpacing.AfterComment'),
+            new ErrorData(14, 'Squiz.WhiteSpace.MemberVarSpacing.AfterComment'),
+            new ErrorData(21, 'Squiz.WhiteSpace.MemberVarSpacing.AfterComment'),
+            new ErrorData(28, 'Squiz.WhiteSpace.MemberVarSpacing.AfterComment'),
+            new ErrorData(31, 'Squiz.WhiteSpace.MemberVarSpacing.AfterComment'),
+            new ErrorData(41, 'Squiz.WhiteSpace.MemberVarSpacing.AfterComment'),
             new ErrorData(43, 'Squiz.WhiteSpace.MemberVarSpacing.Incorrect'),
           ],
         ];
