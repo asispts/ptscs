@@ -1,64 +1,64 @@
 name: CI
 
 on:
-    pull_request:
-        branches:
-            - "main"
+  pull_request:
+    branches:
+      - "main"
 
 concurrency:
-    group: ${{ github.workflow }}-${{ github.ref }}
-    cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
-    contents: read
+  contents: read
 
 jobs:
-    lint:
-        strategy:
-            matrix:
-                php: [7.2]
+  lint:
+    strategy:
+      matrix:
+        php: [7.2]
 
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
 
-            - name: Setup PHP, with composer and extensions
-              uses: shivammathur/setup-php@v2
-              with:
-                  php-version: ${{ matrix.php }}
-                  coverage: none
+      - name: Setup PHP, with composer and extensions
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
 
-            - name: Install dependencies
-              run: composer install --no-progress
+      - name: Install dependencies
+        run: composer install --no-progress
 
-            - name: Check coding style
-              run: vendor/bin/phpcs
+      - name: Check coding style
+        run: vendor/bin/phpcs
 
-            - name: Run static analyser
-              run: vendor/bin/phpstan analyse
+      - name: Run static analyser
+        run: vendor/bin/phpstan analyse
 
-    test:
-        strategy:
-            fail-fast: false
-            matrix:
-                php: [7.2, 7.3, 7.4, 8.0, 8.1, 8.2]
-                mode: [low, high]
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [7.2, 7.3, 7.4, 8.0, 8.1, 8.2] # PHP 8.3+ are not supported
+        mode: [low, high]
 
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
 
-            - name: Setup PHP, with composer and extensions
-              uses: shivammathur/setup-php@v2
-              with:
-                  php-version: ${{ matrix.php }}
-                  coverage: none
+      - name: Setup PHP, with composer and extensions
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: none
 
-            - name: Install dependencies
-              run: |
-                  [[ "${{ matrix.mode }}" = "low" ]] && composer update --no-progress --prefer-lowest || true
-                  [[ "${{ matrix.mode }}" = "high" ]] && composer update --no-progress || true
-                  [[ "${{ matrix.mode }}" = "low" ]] && composer bin tools update --no-progress || true
+      - name: Install dependencies
+        run: |
+          [[ "${{ matrix.mode }}" = "low" ]] && composer update --no-progress --prefer-lowest || true
+          [[ "${{ matrix.mode }}" = "high" ]] && composer update --no-progress || true
+          [[ "${{ matrix.mode }}" = "low" ]] && composer bin tools update --no-progress || true
 
-            - name: Run testing
-              run: vendor/bin/phpunit
+      - name: Run testing
+        run: vendor/bin/phpunit
