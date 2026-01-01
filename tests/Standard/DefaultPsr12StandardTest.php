@@ -71,10 +71,10 @@ final class DefaultPsr12StandardTest extends TestCase
         yield 'class data' => [
           'class',
           [
-            new ErrorData(1, 'PSR12.Files.FileHeader.SpacingAfterBlock'),
-            new ErrorData(2, 'PSR12.Files.FileHeader.SpacingAfterBlock'),
+            new ErrorData(1, 'PSR12.Files.FileHeader.SpacingAfterTagBlock'),
+            new ErrorData(2, 'PSR12.Files.FileHeader.SpacingAfterNamespaceBlock'),
             new ErrorData(3, 'Generic.Formatting.DisallowMultipleStatements.SameLine'),
-            new ErrorData(4, 'PSR12.Files.FileHeader.SpacingAfterBlock'),
+            new ErrorData(4, 'PSR12.Files.FileHeader.SpacingAfterUseBlock'),
             new ErrorData(6, 'PSR2.Classes.ClassDeclaration.ExtendsLine'),
             new ErrorData(7, 'PSR2.Classes.ClassDeclaration.ImplementsLine'),
             new ErrorData(9, 'PSR12.Traits.UseDeclaration.NoBlankLineAfterUse'),
