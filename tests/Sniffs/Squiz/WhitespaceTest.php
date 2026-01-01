@@ -13,9 +13,9 @@ final class WhitespaceTest extends SniffTestCase
         yield [
           [
             new ErrorData(4, 'Squiz.WhiteSpace.SemicolonSpacing.Incorrect'),
-            new ErrorData(7, 'Squiz.WhiteSpace.LanguageConstructSpacing.Incorrect'),
-            new ErrorData(8, 'Squiz.WhiteSpace.LanguageConstructSpacing.Incorrect'),
-            new ErrorData(9, 'Squiz.WhiteSpace.LanguageConstructSpacing.Incorrect'),
+            new ErrorData(7, 'Generic.WhiteSpace.LanguageConstructSpacing.Incorrect'),
+            new ErrorData(8, 'Generic.WhiteSpace.LanguageConstructSpacing.Incorrect'),
+            new ErrorData(9, 'Generic.WhiteSpace.LanguageConstructSpacing.Incorrect'),
             new ErrorData(12, 'Squiz.WhiteSpace.LogicalOperatorSpacing.TooMuchSpaceBefore'),
             new ErrorData(13, 'Squiz.WhiteSpace.LogicalOperatorSpacing.TooMuchSpaceAfter'),
             new ErrorData(16, 'Squiz.WhiteSpace.ObjectOperatorSpacing.Before'),
